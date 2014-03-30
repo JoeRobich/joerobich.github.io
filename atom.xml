@@ -4,12 +4,13 @@
   <title><![CDATA[Joey Robichaud]]></title>
   <link href="http://www.joeyrobichaud.com/atom.xml" rel="self"/>
   <link href="http://www.joeyrobichaud.com/"/>
-  <updated>2014-03-30T14:41:00-04:00</updated>
+  <updated>2014-03-30T14:48:57-04:00</updated>
   <id>http://www.joeyrobichaud.com/</id>
   <author>
     <name><![CDATA[Joey Robichaud]]></name>
     
   </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
