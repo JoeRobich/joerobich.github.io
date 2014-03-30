@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://JoeRobich.github.io/sitemap.xml 
+Sitemap: http://www.joeyrobichaud.com/sitemap.xml 
