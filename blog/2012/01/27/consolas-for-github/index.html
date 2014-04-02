@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Consolas for github - Joey Robichaud</title>
+  <meta name="author" content="Joey Robichaud">
+
+  
+  <meta name="description" content="This post originally appeared on The DevStop and has been migrated here via a quick and dirty script. Please forgive any encoding issues. I was &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.joeyrobichaud.com/blog/2012/01/27/consolas-for-github">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Joey Robichaud" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Joey Robichaud</a></h1>
+  
+    <h2>code and thoughts</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.joeyrobichaud.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Consolas for Github</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-27T00:00:00-05:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><!-- more -->
+
+
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2012/01/27/consolas-for-github/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+
+<p>I was reading my twitter feed the other day and saw this exchange come through&hellip;</p>
+
+<p><a href="http://thedevstop.files.wordpress.com/2012/01/why-not-consolas.png"><img class="size-full wp-image-529 aligncenter" title="Why not Consolas?" src="http://thedevstop.files.wordpress.com/2012/01/why-not-consolas.png" alt="Why not Consolas?" width="556" height="357" /></a></p>
+
+<p>and I couldn&rsquo;t agree more.Â So I decided to do something about it!</p>
+
+<h2>Getting to know Greasemonkey</h2>
+
+
+<p>I remember hearing about Greasemonkey scripts back in Firefox&rsquo;s heyday. According to Wikipedia, <a href="http://en.wikipedia.org/wiki/Greasemonkey">Greasemonkey</a> &ldquo;&hellip;Â allows users to installÂ scriptsÂ that makeÂ on-the-flyÂ changes toÂ HTMLÂ web pageÂ content &hellip;&rdquo; Even better than that, Google Chrome treats the scripts as extensions <a href="http://www.chromium.org/developers/design-documents/user-scripts">right out of the box</a>.</p>
+
+<p>Of course, I have never written a Greasemonkey script so, I went to the worlds repository of these scripts,Â <a href="http://userscripts.org/">Userscripts.org</a>. Right off the bat, Userscripts made it super easy to get my bearings; they allow you to view the source of existing scripts right in the browser.</p>
+
+<p><a href="http://thedevstop.files.wordpress.com/2012/01/userscripts-source-code1.png"><img class="size-full wp-image-531 aligncenter" title="Userscripts view source code" src="http://thedevstop.files.wordpress.com/2012/01/userscripts-source-code1.png" alt="Userscripts view source code" width="556" height="427" /></a></p>
+
+<p>My next stop is over at github to figure out what CSS I need to replace.</p>
+
+<h2>Github&#8217;s CSS</h2>
+
+
+<p>Alright, time to use those F12 tools! I browsed over to the <a href="https://github.com/mono/monodevelop">MonoDevelop</a> project on github and inspected the element that contained source code.</p>
+
+<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/pre-font-family-css.png"><img class="alignnone size-full wp-image-532" title="Source code font family css" src="http://thedevstop.files.wordpress.com/2012/01/pre-font-family-css.png" alt="Source code font family css" width="581" height="513" /></a></p>
+
+
+<p style="text-align:left;">Great! Now I know the CSS selectors that I need to override. With this knowledge in hand I started my first user script.</p>
+
+
+<p style="text-align:left;">First, I borrowed a bit of code for injecting a new style elements into the page head. I then copied the CSS for github&#8217;s pre element over to my script and added Consolas to the beginning of the font family definition. Just like that, I had the first version of my script.</p>
+
+
+
+
+<h2 style="text-align:left;">Bringing it together</h2>
+
+
+<p style="text-align:left;">I created an account on Userscripts.org and navigated to script management. Uploading was as simple as pointing to my script file and filling out some metadata about the script. Time to see it in action!</p>
+
+
+
+
+<h2 style="text-align:left;">The finish line!</h2>
+
+
+<p>I went to the <a href="http://userscripts.org/scripts/show/123936">Consolas for github</a> script page with Chrome and clicked the install button.</p>
+
+<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/userscripts-install.png"><img class="alignnone size-full wp-image-533" title="Userscripts install" src="http://thedevstop.files.wordpress.com/2012/01/userscripts-install.png" alt="Userscripts install" width="581" height="292" /></a></p>
+
+
+<p style="text-align:left;">Followed the prompts..</p>
+
+
+<p style="text-align:left;"><a href="http://thedevstop.files.wordpress.com/2012/01/userscripts-continue.png"><img class="size-full wp-image-534" title="Continue installation" src="http://thedevstop.files.wordpress.com/2012/01/userscripts-continue.png" alt="Continue installation" width="494" height="43" /></a></p>
+
+
+<p style="text-align:left;"><a href="http://thedevstop.files.wordpress.com/2012/01/userscripts-add.png"><img class="size-full wp-image-535" title="Add script as extension" src="http://thedevstop.files.wordpress.com/2012/01/userscripts-add.png" alt="Add script as extension" width="425" height="225" /></a></p>
+
+
+<p>.. and Success!</p>
+
+<p style="text-align:left;"><a href="http://thedevstop.files.wordpress.com/2012/01/before-and-after.png"><img class="size-full wp-image-536 aligncenter" title="Code before and after" src="http://thedevstop.files.wordpress.com/2012/01/before-and-after.png" alt="Code before and after" width="638" height="487" /></a></p>
+
+
+<p style="text-align:left;">After some twiddling, I get the in-browser editor using Consolas as well.</p>
+
+
+<p style="text-align:left;">Install it. Enjoy it. Remix it. Please justÂ don&#8217;t make Comic Sans for github.</p>
+
+
+<p style="text-align:left;"><a href="http://userscripts.org/scripts/show/123936">Consolas for github on Userscripts.org</a></p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Joey Robichaud</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-27T00:00:00-05:00" pubdate data-updated="true"></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.joeyrobichaud.com/blog/2012/01/27/consolas-for-github/" data-via="joeyrobichaud" data-counturl="http://www.joeyrobichaud.com/blog/2012/01/27/consolas-for-github/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/01/04/vibrantink-theme-for-flashdevelop/" title="Previous Post: VibrantInk Theme for FlashDevelop">&laquo; VibrantInk Theme for FlashDevelop</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/02/03/making-a-code-library/" title="Next Post: Making a Code Library">Making a Code Library &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/01/28/the-story-of-asfac/">The Story of asfac</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/04/09/from-javascriptserializer-to-jsonnet/">From JavaScriptSerializer to JSON.Net</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/03/making-a-code-library/">Making a Code Library</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/01/27/consolas-for-github/">Consolas for github</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/01/04/vibrantink-theme-for-flashdevelop/">VibrantInk Theme for FlashDevelop</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/joerobich">@joerobich</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'joerobich',
+            count: 4,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Joey Robichaud -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> | Themed with <a href="https://github.com/lucaslew/whitespace">Whitespace</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

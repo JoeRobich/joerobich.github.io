@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Add Settings hotkeys to Visual Studio 2010 - Joey Robichaud</title>
+  <meta name="author" content="Joey Robichaud">
+
+  
+  <meta name="description" content="This post originally appeared on The DevStop and has been migrated here via a quick and dirty script. Please forgive any encoding issues. On several &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.joeyrobichaud.com/blog/2011/08/16/add-settings-hotkeys-to-visual-studio-2010">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Joey Robichaud" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Joey Robichaud</a></h1>
+  
+    <h2>code and thoughts</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.joeyrobichaud.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Add Settings Hotkeys to Visual Studio 2010</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-16T00:00:00-04:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><!-- more -->
+
+
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/08/16/add-settings-hotkeys-to-visual-studio-2010/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+
+<p>On several occasions I have presented topics to my team during our monthly lunch and learns. These presentations almost always include code samples and complaints about font size. Although I had read, I have never taken Scott Hanselman&rsquo;s advice forÂ <a href="http://www.hanselman.com/blog/TheGuideToCreatingQualityTechnicalScreencasts.aspx" target="_blank">preparing for a screencast</a>. Most of which are applicable when presenting.</p>
+
+<blockquote>&#8220;Use the standard Visual Studio Font Colors&#8230;Â change your fonts to Consolas Size 15.&#8221;</blockquote>
+
+
+<p>Oh no! I haven&rsquo;t used the default Visual Studio theme since I ran across Rob Conery&#8217;sÂ <a href="http://blog.wekeroad.com/2007/10/17/textmate-theme-for-visual-studio-take-2/" target="_blank">Vibrant Ink theme</a>Â (which should be shipped as the defaults IMHO). It would be nice if Visual Studio made it simple to switch between various configurations on the fly.</p>
+
+<p>Then last week I saw <a href="http://twitter.com/#!/JeffHandley/status/101520788745756672" target="_blank">this tweet</a> come through my feed.</p>
+
+<blockquote><a href="http://thedevstop.files.wordpress.com/2011/08/tweet.png"><img class="size-full wp-image-303" title="Tweet" src="http://thedevstop.files.wordpress.com/2011/08/tweet.png" alt="Tweet &quot;That's where my settings helpers come in handy.&quot;" width="544" height="223" /></a></blockquote>
+
+
+<p>That&rsquo;s it. I decided that today was the day for change. Jeff Handley&rsquo;s macros make it dead simple to go from development to presentation mode on the fly.</p>
+
+<p>There are just a few things that I wanted to tweak. First, I found switching to presentation mode took too long, and I thought it would be simpler to just change the font size. Second, I wanted to be able to switch between the default theme and my theme quickly and without affecting font size.</p>
+
+<p>With this in mind, I needed to export the default Visual Studio colors and the Vibrant Ink themes. To make switching themes short,Â I only exported Options &gt; Environment &gt; Fonts and Colors.</p>
+
+<p><a href="http://thedevstop.files.wordpress.com/2011/08/fonts-and-colors.png"><img class="alignnone size-full wp-image-329" title="fonts-and-colors" src="http://thedevstop.files.wordpress.com/2011/08/fonts-and-colors.png" alt="Export Fonts and Colors" width="631" height="565" /></a></p>
+
+<p>Next, I launched Tools &gt; Macros &gt; Macros IDE&hellip; and got to work. Using Jeff&rsquo;s macros as the base I started making my changes. So instead of loading settings for presentations, I made the macro toggle the font size between 10 and 15. When applying a change to the theme I made sure to remember the current font size and set it back after loading either the default theme or my own. Although I struggled a bit with the Visual Basic syntax, it wasn&rsquo;t long until I was finished.</p>
+
+<p>Below is the modified <a href="https://github.com/JoeRobich/BlogCode/blob/master/Settings.vb" target="_blank">Settings macros</a> that I use.</p>
+
+<p>[sourcecode language=&ldquo;vb&rdquo;]
+Imports System
+Imports EnvDTE
+Imports EnvDTE80
+Imports EnvDTE90
+Imports EnvDTE90a
+Imports EnvDTE100
+Imports System.Diagnostics</p>
+
+<p>Public Module Settings</p>
+
+<pre><code>Private Const FONT_SIZE_CATEGORY As String = &amp;quot;FontsAndColors&amp;quot;
+Private Const FONT_SIZE_PAGE As String = &amp;quot;TextEditor&amp;quot;
+Private Const FONT_SIZE_NAME As String = &amp;quot;FontSize&amp;quot;
+
+Private RootFolder As String = &amp;quot;[Your Root]\Documents\Visual Studio 2010\Settings\&amp;quot;
+
+Public Sub ImportDefaultSettings()
+    SetColorTheme(&amp;quot;DefaultTheme&amp;quot;)
+End Sub
+
+Public Sub ImportCodingSettings()
+    SetColorTheme(&amp;quot;VibrantInkTheme&amp;quot;)
+End Sub
+
+Public Sub TogglePresentationSettings()
+    Dim fontSizeProperty As EnvDTE.Property = GetDTEProperty(FONT_SIZE_CATEGORY, FONT_SIZE_PAGE, FONT_SIZE_NAME)
+
+    If fontSizeProperty.Value = 15 Then
+        fontSizeProperty.Value = 10
+    Else
+        fontSizeProperty.Value = 15
+    End If
+End Sub
+
+Public Sub ImportKnRFormatting()
+    ImportSettingsFile(&amp;quot;KnRFormatting&amp;quot;)
+    DTE.ExecuteCommand(&amp;quot;Edit.FormatDocument&amp;quot;)
+End Sub
+
+Public Sub ImportAllmanFormatting()
+    ImportSettingsFile(&amp;quot;AllmanFormatting&amp;quot;)
+    DTE.ExecuteCommand(&amp;quot;Edit.FormatDocument&amp;quot;)
+End Sub
+
+Private Sub SetColorTheme(ByVal fileName As String)
+    Dim fontSizeProperty As EnvDTE.Property = GetDTEProperty(FONT_SIZE_CATEGORY, FONT_SIZE_PAGE, FONT_SIZE_NAME)
+    Dim fontSize As Integer = fontSizeProperty.Value
+
+    ImportSettingsFile(fileName)
+
+    fontSizeProperty.Value = fontSize
+End Sub
+
+Private Function GetDTEProperty(ByVal categoryName As String, ByVal pageName As String, ByVal propertyName As String) As EnvDTE.Property
+    For Each prop In DTE.Properties(categoryName, pageName)
+        If prop.Name = propertyName Then
+            Return prop
+        End If
+    Next
+End Function
+
+Private Sub ImportSettingsFile(ByVal FileName As String)
+    FileName = IO.Path.Combine(RootFolder, FileName &amp;amp; &amp;quot;.vssettings&amp;quot;)
+    DTE.ExecuteCommand(&amp;quot;Tools.ImportandExportSettings&amp;quot;, &amp;quot;-import:&amp;quot;&amp;quot;&amp;quot; &amp;amp; FileName &amp;amp; &amp;quot;&amp;quot;&amp;quot;&amp;quot;)
+End Sub
+</code></pre>
+
+<p>End Module
+[/sourcecode]</p>
+
+<p>At this point, I threw together a toolbar and added the macros to it. They worked! Now I wanted to create some nice icons to use just like Jeff had done. It was when I was trying to apply them that disappointment crept in. Despite the <a href="http://msdn.microsoft.com/en-us/library/3dy74ad1.aspx" target="_blank">documentation for adding macros</a> to a toolbar, the comments point out correctly that you cannot assign a macro command an image. Bummer.</p>
+
+<p>Maybe I don&rsquo;t need a toolbar. I can just hook up the macros to some easy to remember shortcut chords. Click on Tools &gt; Options&hellip; menu. Then browse to Environment &gt; Keyboard. Type Macros.Settings into the filter box and we can start assigning.</p>
+
+<p><a href="http://thedevstop.files.wordpress.com/2011/08/options-keyboard.png"><img class="alignnone size-full wp-image-308" title="Keyboard Options" src="http://thedevstop.files.wordpress.com/2011/08/options-keyboard.png" alt="Visual Studio Keyboard Options" width="640" height="372" /></a></p>
+
+<p>Finding shortcut keys that weren&rsquo;t already in use was a little frustrating, so I decided to go with &ldquo;long, but simple to remember&rdquo;. Using ctrl+alt+shift as the modifiers, my chords are s (for settings) then a, c, d, k, or p depending on which macro to launch.</p>
+
+<p>Now I have no more excuses to use tiny code during my next presentation and if you follow these steps then neither will you. You can download my all of my vssettings, the macro file, and even the toolbar images I didn&rsquo;t get to use <a href="https://docs.google.com/viewer?a=v&amp;pid=explorer&amp;chrome=true&amp;srcid=0B2UumFXyeY3BYzkzMDliZjQtNjRiMC00NjdjLThhMzUtZTYxYWJiNjYyMTgx&amp;hl=en_US" target="_blank">here</a>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Joey Robichaud</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-16T00:00:00-04:00" pubdate data-updated="true"></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.joeyrobichaud.com/blog/2011/08/16/add-settings-hotkeys-to-visual-studio-2010/" data-via="joeyrobichaud" data-counturl="http://www.joeyrobichaud.com/blog/2011/08/16/add-settings-hotkeys-to-visual-studio-2010/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/02/15/sswc-and-jquery-image-rotator-on-codeplex/" title="Previous Post: SSWC and jQuery Image Rotator on CodePlex">&laquo; SSWC and jQuery Image Rotator on CodePlex</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/08/17/vibrantink-theme-for-flashbuilder/" title="Next Post: VibrantInk Theme for FlashBuilder">VibrantInk Theme for FlashBuilder &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/01/28/the-story-of-asfac/">The Story of asfac</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/04/09/from-javascriptserializer-to-jsonnet/">From JavaScriptSerializer to JSON.Net</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/03/making-a-code-library/">Making a Code Library</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/01/27/consolas-for-github/">Consolas for github</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/01/04/vibrantink-theme-for-flashdevelop/">VibrantInk Theme for FlashDevelop</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/joerobich">@joerobich</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'joerobich',
+            count: 4,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Joey Robichaud -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> | Themed with <a href="https://github.com/lucaslew/whitespace">Whitespace</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
