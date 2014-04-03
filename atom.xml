@@ -4,7 +4,7 @@
   <title><![CDATA[Joey Robichaud]]></title>
   <link href="http://www.joeyrobichaud.com/atom.xml" rel="self"/>
   <link href="http://www.joeyrobichaud.com/"/>
-  <updated>2014-04-03T10:36:41-04:00</updated>
+  <updated>2014-04-03T12:01:47-04:00</updated>
   <id>http://www.joeyrobichaud.com/</id>
   <author>
     <name><![CDATA[Joey Robichaud]]></name>
@@ -22,12 +22,12 @@
 
 <h3>Genesis</h3>
 
-<p>It is all <a href="http://stackoverflow.com/users/22656/jon-skeet" target="_blank">Jon Skeet</a>&rsquo;s fault really. I rediscovered this gem of a video he recorded with <a href="http://wekeroad.com/" target="_blank">Rob Conery</a> for a series on <a href="http://tekpub.com/" target="_blank">TekPub</a>. In the video Jon creates a functioning IoC container in matter of minutes.</p>
+<p>It is all <a href="http://stackoverflow.com/users/22656/jon-skeet">Jon Skeet</a>&rsquo;s fault really. I rediscovered this gem of a video he recorded with <a href="http://wekeroad.com/">Rob Conery</a> for a series on <a href="http://tekpub.com/" target="_blank">TekPub</a>. In the video Jon creates a functioning IoC container in matter of minutes.</p>
 
 <div class="embed-video-container"><iframe src="http://www.youtube.com/embed/cfvTfU5RK8Q "></iframe></div>
 
 
-<p>I was unfamiliar with the concept of containers at the time, but the basics looked simple enough. So I set out to learn more by implementing a container for ActionScript. Why ActionScript you might ask? I wanted to explore the concepts without directly copying Jon&rsquo;s code. My first stab at the container lives as a <a href="https://gist.github.com/3719764" target="_blank">Gist</a> and is a pretty straight port of Jon&rsquo;s code. A good start perhaps, but I wanted better.</p>
+<p>I was unfamiliar with the concept of containers at the time, but the basics looked simple enough. So I set out to learn more by implementing a container for ActionScript. Why ActionScript you might ask? I wanted to explore the concepts without directly copying Jon&rsquo;s code. My first stab at the container lives as a <a href="https://gist.github.com/3719764">gist</a> and is a pretty straight port of Jon&rsquo;s code. A good start perhaps, but I wanted better.</p>
 
 <h3>Work in Progress</h3>
 
@@ -49,9 +49,9 @@
 
 <p>So it took a while but we are at v1.0. We finished something we started. Success! So if you are using ActionScript and have need of an IoC container, then please take us into consideration with all the others and let us know how we stack up.</p>
 
-<p><a href="https://github.com/thedevstop/asfac" target="_blank">asfac on GitHub</a></p>
+<p><a href="https://github.com/thedevstop/asfac">asfac on GitHub</a></p>
 
-<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2013/01/28/the-story-of-asfac/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2013/01/28/the-story-of-asfac/">The DevStop</a>.</em></p>
 ]]></content>
   </entry>
   
@@ -448,9 +448,9 @@
 
 <p>After changing a few import statements I was ready to go. Testing showed a particular server query that had been taking close to 2 minutes to return would now return in under 30 seconds consistently. This was certainly a huge win considering it required a very small set of changes to the project&rsquo;s code.</p>
 
-<p>Overall the process went smoothly and I am very happy with the result. If you would like to use this code yourself, it is available as a <a href="https://gist.github.com/2331300" title="Gist on GitHub">Gist on GitHub</a>.</p>
+<p>Overall the process went smoothly and I am very happy with the result. If you would like to use this code yourself, it is available as a <a href="https://gist.github.com/2331300">Gist on GitHub</a>.</p>
 
-<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2012/04/09/from-javascriptserializer-to-jsonnet/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2012/04/09/from-javascriptserializer-to-jsonnet/">The DevStop</a>.</em></p>
 ]]></content>
   </entry>
   
@@ -465,24 +465,21 @@
 
 <p>A new feature in the much derided Windows Vista was the ability to group folders of like content into libraries. Vista and Windows 7 come pre-loaded with Documents, Music, Picture, and Video libraries. Today we are going to step through making a Source library.</p>
 
-<p>If you are anything like me and I suspect a number of you are then, you have code scattered all across yourÂ hard drive. You could move all that source into one folder under Documents and be done with it. However, there are times when you just cannot move the source. Creating a library is a way of managing the clutter.</p>
+<p>If you are anything like me and I suspect a number of you are then, you have code scattered all across your hard drive. You could move all that source into one folder under Documents and be done with it. However, there are times when you just cannot move the source. Creating a library is a way of managing the clutter.</p>
 
 <h3>Create the library</h3>
 
 <p>First, let us press Windows + E to open Explorer. Right-click the Libraries folder. Go to New, then click on &lsquo;Library&rsquo;.</p>
 
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/new-library.png"><img class="size-full wp-image-552 aligncenter" title="New library" src="http://thedevstop.files.wordpress.com/2012/01/new-library.png" alt="New library" width="568" height="487" /></a></p>
-
+<p><img src="http://thedevstop.files.wordpress.com/2012/01/new-library.png" alt="New library" /></p>
 
 <p>Let&rsquo;s name it Source..</p>
 
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/source-library.png"><img class="size-full wp-image-553 aligncenter" title="The source library" src="http://thedevstop.files.wordpress.com/2012/01/source-library.png" alt="The source library" width="568" height="487" /></a></p>
-
+<p><img src="http://thedevstop.files.wordpress.com/2012/01/source-library.png" alt="The source library" /></p>
 
 <p>Click on it. As you can see there is not that not much going on yet.</p>
 
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/empty-source-library.png"><img class="size-full wp-image-554 aligncenter" title="Empty source library" src="http://thedevstop.files.wordpress.com/2012/01/empty-source-library.png" alt="Empty source library" width="568" height="487" /></a></p>
-
+<p><img src="http://thedevstop.files.wordpress.com/2012/01/empty-source-library.png" alt="Empty source library" /></p>
 
 <h3>Including your source folders</h3>
 
@@ -490,33 +487,29 @@
 
 <p>Right click the Source library and click on &lsquo;Properties&rsquo;.</p>
 
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/include-a-folder1.png"><img class="alignnone size-full wp-image-556" title="Source library properties" src="http://thedevstop.files.wordpress.com/2012/01/include-a-folder1.png" alt="Source library properties" width="568" height="487" /></a></p>
-
+<p><img src="http://thedevstop.files.wordpress.com/2012/01/include-a-folder1.png" alt="Source library properties" /></p>
 
 <p>Click on &lsquo;Include a folder&hellip;&rsquo; and start adding all your source folders.</p>
 
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/include-a-folder2.png"><img class="alignnone size-full wp-image-557" title="Include a folder" src="http://thedevstop.files.wordpress.com/2012/01/include-a-folder2.png" alt="Include a folder" width="375" height="515" /></a></p>
-
+<p><img src="http://thedevstop.files.wordpress.com/2012/01/include-a-folder2.png" alt="Include a folder" /></p>
 
 <p>After adding my various code cubbyholes my properties looks like this..</p>
 
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/all-folders-added2.png"><img class="alignnone size-full wp-image-562" title="All folders added" src="http://thedevstop.files.wordpress.com/2012/01/all-folders-added2.png" alt="All folders added" width="375" height="515" /></a></p>
-
+<p><img src="http://thedevstop.files.wordpress.com/2012/01/all-folders-added2.png" alt="All folders added" /></p>
 
 <p>Note that by default the first folder added becomes the &lsquo;save location&rsquo;. This is the folder that files are stored in when the Source Library folder is selected. If you want to change the default select the folder you want to become the save location then, click the &lsquo;Set save location&rsquo; button.</p>
 
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/set-save-folder2.png"><img class="alignnone size-full wp-image-563" title="Set save folder" src="http://thedevstop.files.wordpress.com/2012/01/set-save-folder2.png" alt="Set save folder" width="375" height="515" /></a></p>
-
+<p><img src="http://thedevstop.files.wordpress.com/2012/01/set-save-folder2.png" alt="Set save folder" /></p>
 
 <h3>Clean house accomplished!</h3>
 
 <p>Yay! Everything is all in one place now. Too bad Windows doesn&rsquo;t detect included folders with the save name and display more of the path.</p>
 
-<p><a href="http://thedevstop.files.wordpress.com/2012/01/source-library-complete.png"><img class="size-full wp-image-564 aligncenter" title="Source library complete" src="http://thedevstop.files.wordpress.com/2012/01/source-library-complete.png" alt="Source library complete" width="566" height="515" /></a></p>
+<p><img src="http://thedevstop.files.wordpress.com/2012/01/source-library-complete.png" alt="Source library complete" /></p>
 
 <p>I hope you found this useful or at least stopped reading before I wasted too much of your time. =p</p>
 
-<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2012/02/03/making-a-code-library/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2012/02/03/making-a-code-library/">The DevStop</a>.</em></p>
 ]]></content>
   </entry>
   
@@ -527,8 +520,7 @@
     <id>http://www.joeyrobichaud.com/blog/2012/01/27/consolas-for-github</id>
     <content type="html"><![CDATA[<p>I was reading my twitter feed the other day and saw this exchange come through&hellip;</p>
 
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/why-not-consolas.png"><img title="Why not Consolas?" src="http://thedevstop.files.wordpress.com/2012/01/why-not-consolas.png" alt="Why not Consolas?" width="556" height="357" /></a></p>
-
+<p><img src="http://thedevstop.files.wordpress.com/2012/01/why-not-consolas.png" alt="Why not Consolas?" /></p>
 
 <p>and I couldn&rsquo;t agree more. So I decided to do something about it!</p>
 
@@ -538,7 +530,7 @@
 
 <p>Of course, I have never written a Greasemonkey script so, I went to the worlds repository of these scripts, <a href="http://userscripts.org/">Userscripts.org</a>. Right off the bat, Userscripts made it super easy to get my bearings; they allow you to view the source of existing scripts right in the browser.</p>
 
-<p><a href="http://thedevstop.files.wordpress.com/2012/01/userscripts-source-code1.png"><img class="size-full wp-image-531 aligncenter" title="Userscripts view source code" src="http://thedevstop.files.wordpress.com/2012/01/userscripts-source-code1.png" alt="Userscripts view source code" width="556" height="427" /></a></p>
+<p><img src="http://thedevstop.files.wordpress.com/2012/01/userscripts-source-code1.png" alt="Userscripts view source code" /></p>
 
 <p>My next stop is over at github to figure out what CSS I need to replace.</p>
 
@@ -546,8 +538,7 @@
 
 <p>Alright, time to use those F12 tools! I browsed over to the <a href="https://github.com/mono/monodevelop">MonoDevelop</a> project on github and inspected the element that contained source code.</p>
 
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/pre-font-family-css.png"><img title="Source code font family css" src="http://thedevstop.files.wordpress.com/2012/01/pre-font-family-css.png" alt="Source code font family css" width="581" height="513" /></a></p>
-
+<p><img src="http://thedevstop.files.wordpress.com/2012/01/pre-font-family-css.png" alt="Source code font family css" /></p>
 
 <p>Great! Now I know the CSS selectors that I need to override. With this knowledge in hand I started my first user script.</p>
 
@@ -561,21 +552,16 @@
 
 <p>I went to the <a href="http://userscripts.org/scripts/show/123936">Consolas for github</a> script page with Chrome and clicked the install button.</p>
 
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/userscripts-install.png"><img title="Userscripts install" src="http://thedevstop.files.wordpress.com/2012/01/userscripts-install.png" alt="Userscripts install" width="581" height="292" /></a></p>
-
+<p><img src="http://thedevstop.files.wordpress.com/2012/01/userscripts-install.png" alt="Userscripts install" /></p>
 
 <p>Followed the prompts..</p>
 
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/userscripts-continue.png"><img title="Continue installation" src="http://thedevstop.files.wordpress.com/2012/01/userscripts-continue.png" alt="Continue installation" width="494" height="43" /></a></p>
-
-
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/userscripts-add.png"><img title="Add script as extension" src="http://thedevstop.files.wordpress.com/2012/01/userscripts-add.png" alt="Add script as extension" width="425" height="225" /></a></p>
-
+<p><img src="http://thedevstop.files.wordpress.com/2012/01/userscripts-continue.png" alt="Continue installation" />
+<img src="http://thedevstop.files.wordpress.com/2012/01/userscripts-add.png" alt="Add script as extension" /></p>
 
 <p>.. and Success!</p>
 
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/before-and-after.png"><img title="Code before and after" src="http://thedevstop.files.wordpress.com/2012/01/before-and-after.png" alt="Code before and after" width="638" height="487" /></a></p>
-
+<p><img src="http://thedevstop.files.wordpress.com/2012/01/before-and-after.png" alt="Code before and after" /></p>
 
 <p>After some twiddling, I get the in-browser editor using Consolas as well.</p>
 
@@ -583,7 +569,7 @@
 
 <p><a href="http://userscripts.org/scripts/show/123936">Consolas for github on Userscripts.org</a></p>
 
-<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2012/01/27/consolas-for-github/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2012/01/27/consolas-for-github/">The DevStop</a>.</em></p>
 ]]></content>
   </entry>
   
@@ -594,14 +580,13 @@
     <id>http://www.joeyrobichaud.com/blog/2012/01/04/vibrantink-theme-for-flashdevelop</id>
     <content type="html"><![CDATA[<p>At work consummate developer <a href="http://joshuarogers.net/">Josh Rogers</a> got <a href="http://www.flashdevelop.org/">FlashDevelop</a> working with a custom ant build script as a replacement for FlashBuilder. This is great news because FlashDevelop is using less than a tenth of the memory resources that Adobe&rsquo;s Eclipse-based FlashBuilder uses; You should check it out if you are in Flex-land like me.</p>
 
-<p>Now since the first thing I do whenever I start using a new IDE is move over my favorite syntax colors (see also <a title="VibrantInk Theme for FlashBuilder" href="http://thedevstop.wordpress.com/2011/08/17/vibrantink-theme-for-flashbuilder/">VibrantInk for FlashBuilder</a> and <a title="VibrantInk Theme for Notepad++" href="http://thedevstop.wordpress.com/2011/08/29/vibrantink-theme-for-notepad/">VibrantInk for Notepad++</a>), I am once again giving you the fruits of my labor.</p>
+<p>Now since the first thing I do whenever I start using a new IDE is move over my favorite syntax colors (see also <a href="http://thedevstop.wordpress.com/2011/08/17/vibrantink-theme-for-flashbuilder/">VibrantInk for FlashBuilder</a> and <a href="http://thedevstop.wordpress.com/2011/08/29/vibrantink-theme-for-notepad/">VibrantInk for Notepad++</a>), I am once again giving you the fruits of my labor.</p>
 
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/vibrantink-flashdevelop.png"><img title="VibrantInk FlashDevelop" src="http://thedevstop.files.wordpress.com/2012/01/vibrantink-flashdevelop.png" alt="FlashDevelop with VibrantInk Theme" width="640" height="456" /></a></p>
-
+<p><img src="http://thedevstop.files.wordpress.com/2012/01/vibrantink-flashdevelop.png" alt="VibrantInk FlashDevelop" /></p>
 
 <p>It&rsquo;s glorious and it is all yours, if you click <a href="http://goo.gl/8RMmO">here</a>!</p>
 
-<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2012/01/04/vibrantink-theme-for-flashdevelop/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2012/01/04/vibrantink-theme-for-flashdevelop/">The DevStop</a>.</em></p>
 ]]></content>
   </entry>
   
@@ -610,24 +595,21 @@
     <link href="http://www.joeyrobichaud.com/blog/2011/08/29/vibrantink-theme-for-notepadplusplus/"/>
     <updated>2011-08-29T00:00:00-04:00</updated>
     <id>http://www.joeyrobichaud.com/blog/2011/08/29/vibrantink-theme-for-notepadplusplus</id>
-    <content type="html"><![CDATA[<p>Let me start by saying that I know notepad++ comes with a Vibrant Ink theme. It is likely much, much more accurate and if you love TextMate for Mac you should probably use it. However, this theme is based on the <a title="VibrantInk Theme for FlashBuilder" href="http://thedevstop.wordpress.com/2011/08/17/vibrantink-theme-for-flashbuilder/">VibrantInk theme for FlashBuilder</a> and thusly on the <a href="http://blog.wekeroad.com/2007/10/17/textmate-theme-for-visual-studio-take-2/">Visual Studio theme</a> that inspired it.</p>
+    <content type="html"><![CDATA[<p>Let me start by saying that I know notepad++ comes with a Vibrant Ink theme. It is likely much, much more accurate and if you love TextMate for Mac you should probably use it. However, this theme is based on the <a href="http://thedevstop.wordpress.com/2011/08/17/vibrantink-theme-for-flashbuilder/">VibrantInk theme for FlashBuilder</a> and thusly on the <a href="http://blog.wekeroad.com/2007/10/17/textmate-theme-for-visual-studio-take-2/">Visual Studio theme</a> that inspired it.</p>
 
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2011/08/notepadpp.png"><img title="notepadpp" src="http://thedevstop.files.wordpress.com/2011/08/notepadpp.png" alt="Notepad++ " width="640" height="491" /></a></p>
+<p><img src="http://thedevstop.files.wordpress.com/2011/08/notepadpp.png" alt="Notepad++" /></p>
 
+<p>To install simple copy the VInk.xml into %PROGRAMFILES%\Notepad++\themes and restart notepad if it is open. You can change your theme from the Settings > Style Configurator&hellip; dialog.</p>
 
-<p>To install simple copy the VInk.xml into %PROGRAMFILES%\Notepad++\themes and restart notepad if it is open. You can change your theme from the Settings &gt; Style Configurator&hellip; dialog.</p>
-
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2011/08/settings-menu.png"><img title="settings menu" src="http://thedevstop.files.wordpress.com/2011/08/settings-menu.png" alt="Settings Menu" width="251" height="158" /></a></p>
-
+<p><img src="http://thedevstop.files.wordpress.com/2011/08/settings-menu.png" alt="Settings menu" /></p>
 
 <p>Where it says Select Theme, simply choose VInk.</p>
 
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2011/08/configurator.png"><img title="configurator" src="http://thedevstop.files.wordpress.com/2011/08/configurator.png" alt="Style Configurator Dialog" width="640" height="362" /></a></p>
+<p><img src="http://thedevstop.files.wordpress.com/2011/08/configurator.png" alt="Style Configuration Dialog" /></p>
 
+<p>I have loaded sample code from several languages with it and am satisfied I caught the spirit of the theme. If you want you can download it <a href="https://docs.google.com/leaf?id=0B2UumFXyeY3BZDQwYzhkMTItZDY2Ny00NGMwLWFmMzQtOTQ1ODkwNjc5OTcw&amp;amp;hl=en_US">here</a>.</p>
 
-<p>I have loaded sample code from several languages with it and am satisfied I caught the spirit of the theme. If you want you can download it <a href="https://docs.google.com/leaf?id=0B2UumFXyeY3BZDQwYzhkMTItZDY2Ny00NGMwLWFmMzQtOTQ1ODkwNjc5OTcw&amp;hl=en_US">here</a>.</p>
-
-<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/08/29/vibrantink-theme-for-notepad/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/08/29/vibrantink-theme-for-notepad/">The DevStop</a>.</em></p>
 ]]></content>
   </entry>
   
@@ -840,7 +822,7 @@
 
 <p>With that change I am done for now. Manatee creates SqlCE databases and foreign keys now. I still need to put it through it&rsquo;s paces, but I think I have a good start.</p>
 
-<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/08/24/getting-started-with-manatee-and-sql-server-c/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/08/24/getting-started-with-manatee-and-sql-server-c/">The DevStop</a>.</em></p>
 ]]></content>
   </entry>
   
@@ -849,15 +831,15 @@
     <link href="http://www.joeyrobichaud.com/blog/2011/08/17/vibrantink-theme-for-flashbuilder/"/>
     <updated>2011-08-17T00:00:00-04:00</updated>
     <id>http://www.joeyrobichaud.com/blog/2011/08/17/vibrantink-theme-for-flashbuilder</id>
-    <content type="html"><![CDATA[<p><a title="Add Settings hotkeys to Visual Studio 2010" href="http://thedevstop.wordpress.com/2011/08/16/add-settings-hotkeys-to-visual-studio-2010/">Yesterday</a> I mentioned that I don&rsquo;t care for Visual Studio&rsquo;s default theme color choices, that I much prefer Rob Conery&rsquo;s <a href="http://blog.wekeroad.com/2007/10/17/textmate-theme-for-visual-studio-take-2/">VibrantInk</a>. Well I don&rsquo;t care for FlashBuilder&rsquo;s defaults either. So, I give you VibrantInk for FlashBuilder 4.5.</p>
+    <content type="html"><![CDATA[<p><a href="http://thedevstop.wordpress.com/2011/08/16/add-settings-hotkeys-to-visual-studio-2010/">Yesterday</a> I mentioned that I don&rsquo;t care for Visual Studio&rsquo;s default theme color choices, that I much prefer Rob Conery&rsquo;s <a href="http://blog.wekeroad.com/2007/10/17/textmate-theme-for-visual-studio-take-2/">VibrantInk</a>. Well I don&rsquo;t care for FlashBuilder&rsquo;s defaults either. So, I give you VibrantInk for FlashBuilder 4.5.</p>
 
-<p><a href="http://thedevstop.files.wordpress.com/2011/08/flashbuilder4.png"><img class="alignnone size-full wp-image-334" title="flashbuilder4" src="http://thedevstop.files.wordpress.com/2011/08/flashbuilder4.png" alt="FlashBuilder IDE using VibrantInk theme" width="640" height="457" /></a></p>
+<p><img src="http://thedevstop.files.wordpress.com/2011/08/flashbuilder4.png" alt="flashbuilder4" /></p>
 
 <p>Some parts of the highlighting did not port well since FB does not support semantic highlighting, but all in all it is pretty faithful. Just drop the contents of this zip file in your  {workspace}.metadata.plugins\org.eclipse.core.runtime.settings folder and restart FB if it is running.</p>
 
-<p><a href="https://docs.google.com/viewer?a=v&amp;pid=explorer&amp;chrome=true&amp;srcid=0B2UumFXyeY3BNjhmYjNkMWMtNThjZi00ZDQ3LWIwMzEtODU1MDZhMThkMGU0&amp;hl=en_US" target="_blank">Download</a></p>
+<p><a href="https://docs.google.com/viewer?a=v&amp;amp;pid=explorer&amp;amp;chrome=true&amp;amp;srcid=0B2UumFXyeY3BNjhmYjNkMWMtNThjZi00ZDQ3LWIwMzEtODU1MDZhMThkMGU0&amp;amp;hl=en_US">Download</a></p>
 
-<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/08/17/vibrantink-theme-for-flashbuilder/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/08/17/vibrantink-theme-for-flashbuilder/">The DevStop</a>.</em></p>
 ]]></content>
   </entry>
   
@@ -866,27 +848,27 @@
     <link href="http://www.joeyrobichaud.com/blog/2011/08/16/add-settings-hotkeys-to-visual-studio-2010/"/>
     <updated>2011-08-16T00:00:00-04:00</updated>
     <id>http://www.joeyrobichaud.com/blog/2011/08/16/add-settings-hotkeys-to-visual-studio-2010</id>
-    <content type="html"><![CDATA[<p>On several occasions I have presented topics to my team during our monthly lunch and learns. These presentations almost always include code samples and complaints about font size. Although I had read, I have never taken Scott Hanselman&rsquo;s advice for <a href="http://www.hanselman.com/blog/TheGuideToCreatingQualityTechnicalScreencasts.aspx" target="_blank">preparing for a screencast</a>. Most of which are applicable when presenting.</p>
+    <content type="html"><![CDATA[<p>On several occasions I have presented topics to my team during our monthly lunch and learns. These presentations almost always include code samples and complaints about font size. Although I had read, I have never taken Scott Hanselman&rsquo;s advice for <a href="http://www.hanselman.com/blog/TheGuideToCreatingQualityTechnicalScreencasts.aspx">preparing for a screencast</a>. Most of which are applicable when presenting.</p>
 
 <blockquote><p>&ldquo;Use the standard Visual Studio Font Colors&hellip; change your fonts to Consolas Size 15.&rdquo;</p></blockquote>
 
-<p>Oh no! I haven&rsquo;t used the default Visual Studio theme since I ran across Rob Conery&#8217;s <a href="http://blog.wekeroad.com/2007/10/17/textmate-theme-for-visual-studio-take-2/" target="_blank">Vibrant Ink theme</a> (which should be shipped as the defaults IMHO). It would be nice if Visual Studio made it simple to switch between various configurations on the fly.</p>
+<p>Oh no! I haven&rsquo;t used the default Visual Studio theme since I ran across Rob Conery&#8217;s <a href="http://blog.wekeroad.com/2007/10/17/textmate-theme-for-visual-studio-take-2/">Vibrant Ink theme</a> (which should be shipped as the defaults IMHO). It would be nice if Visual Studio made it simple to switch between various configurations on the fly.</p>
 
 <p>Then last week I saw <a href="http://twitter.com/#!/JeffHandley/status/101520788745756672" target="_blank">this tweet</a> come through my feed.</p>
 
-<blockquote><p><a href="http://thedevstop.files.wordpress.com/2011/08/tweet.png"><img class="size-full wp-image-303" title="Tweet" src="http://thedevstop.files.wordpress.com/2011/08/tweet.png" alt="Tweet &quot;That's where my settings helpers come in handy.&quot;" width="544" height="223" /></a></p></blockquote>
+<blockquote><p><img src="http://thedevstop.files.wordpress.com/2011/08/tweet.png" alt="Tweet" /></p></blockquote>
 
 <p>That&rsquo;s it. I decided that today was the day for change. Jeff Handley&rsquo;s macros make it dead simple to go from development to presentation mode on the fly.</p>
 
 <p>There are just a few things that I wanted to tweak. First, I found switching to presentation mode took too long, and I thought it would be simpler to just change the font size. Second, I wanted to be able to switch between the default theme and my theme quickly and without affecting font size.</p>
 
-<p>With this in mind, I needed to export the default Visual Studio colors and the Vibrant Ink themes. To make switching themes short, I only exported Options &gt; Environment &gt; Fonts and Colors.</p>
+<p>With this in mind, I needed to export the default Visual Studio colors and the Vibrant Ink themes. To make switching themes short, I only exported Options > Environment > Fonts and Colors.</p>
 
-<p><a href="http://thedevstop.files.wordpress.com/2011/08/fonts-and-colors.png"><img class="alignnone size-full wp-image-329" title="fonts-and-colors" src="http://thedevstop.files.wordpress.com/2011/08/fonts-and-colors.png" alt="Export Fonts and Colors" width="631" height="565" /></a></p>
+<p><img src="http://thedevstop.files.wordpress.com/2011/08/fonts-and-colors.png" alt="fonts-and-colors" /></p>
 
-<p>Next, I launched Tools &gt; Macros &gt; Macros IDE&hellip; and got to work. Using Jeff&rsquo;s macros as the base I started making my changes. So instead of loading settings for presentations, I made the macro toggle the font size between 10 and 15. When applying a change to the theme I made sure to remember the current font size and set it back after loading either the default theme or my own. Although I struggled a bit with the Visual Basic syntax, it wasn&rsquo;t long until I was finished.</p>
+<p>Next, I launched Tools > Macros > Macros IDE&hellip; and got to work. Using Jeff&rsquo;s macros as the base I started making my changes. So instead of loading settings for presentations, I made the macro toggle the font size between 10 and 15. When applying a change to the theme I made sure to remember the current font size and set it back after loading either the default theme or my own. Although I struggled a bit with the Visual Basic syntax, it wasn&rsquo;t long until I was finished.</p>
 
-<p>Below is the modified <a href="https://github.com/JoeRobich/BlogCode/blob/master/Settings.vb" target="_blank">Settings macros</a> that I use.</p>
+<p>Below is the modified <a href="https://github.com/JoeRobich/BlogCode/blob/master/Settings.vb">Settings macros</a> that I use.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -963,18 +945,18 @@
 </span><span class='line'><span class="k">Imports</span> <span class="nn">System.Diagnostics</span>
 </span><span class='line'>
 </span><span class='line'><span class="k">Public</span> <span class="k">Module</span> <span class="nn">Settings</span>
-</span><span class='line'>    <span class="k">Private</span> <span class="k">Const</span> <span class="n">FONT_SIZE_CATEGORY</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">FontsAndColors&amp;quot</span><span class="err">;</span>
-</span><span class='line'>    <span class="k">Private</span> <span class="k">Const</span> <span class="n">FONT_SIZE_PAGE</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">TextEditor&amp;quot</span><span class="err">;</span>
-</span><span class='line'>    <span class="k">Private</span> <span class="k">Const</span> <span class="n">FONT_SIZE_NAME</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">FontSize&amp;quot</span><span class="err">;</span>
+</span><span class='line'>    <span class="k">Private</span> <span class="k">Const</span> <span class="n">FONT_SIZE_CATEGORY</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">&quot;FontsAndColors&quot;</span>
+</span><span class='line'>    <span class="k">Private</span> <span class="k">Const</span> <span class="n">FONT_SIZE_PAGE</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">&quot;TextEditor&quot;</span>
+</span><span class='line'>    <span class="k">Private</span> <span class="k">Const</span> <span class="n">FONT_SIZE_NAME</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">&quot;FontSize&quot;</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="k">Private</span> <span class="n">RootFolder</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">quot</span><span class="err">;[</span><span class="n">Your</span> <span class="n">Root</span><span class="err">]</span><span class="o">\</span><span class="n">Documents</span><span class="o">\</span><span class="n">Visual</span> <span class="n">Studio</span> <span class="mi">2010</span><span class="o">\</span><span class="n">Settings</span><span class="o">\&amp;</span><span class="n">quot</span><span class="err">;</span>
+</span><span class='line'>    <span class="k">Private</span> <span class="n">RootFolder</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">&quot;[Your Root]\Documents\Visual Studio 2010\Settings\&quot;</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">Public</span> <span class="k">Sub</span> <span class="nf">ImportDefaultSettings</span><span class="p">()</span>
-</span><span class='line'>        <span class="n">SetColorTheme</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">DefaultTheme&amp;quot</span><span class="err">;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">SetColorTheme</span><span class="p">(</span><span class="s">&quot;DefaultTheme&quot;</span><span class="p">)</span>
 </span><span class='line'>    <span class="k">End</span> <span class="k">Sub</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">Public</span> <span class="k">Sub</span> <span class="nf">ImportCodingSettings</span><span class="p">()</span>
-</span><span class='line'>        <span class="n">SetColorTheme</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">VibrantInkTheme&amp;quot</span><span class="err">;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">SetColorTheme</span><span class="p">(</span><span class="s">&quot;VibrantInkTheme&quot;</span><span class="p">)</span>
 </span><span class='line'>    <span class="k">End</span> <span class="k">Sub</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">Public</span> <span class="k">Sub</span> <span class="nf">TogglePresentationSettings</span><span class="p">()</span>
@@ -988,13 +970,13 @@
 </span><span class='line'>    <span class="k">End</span> <span class="k">Sub</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">Public</span> <span class="k">Sub</span> <span class="nf">ImportKnRFormatting</span><span class="p">()</span>
-</span><span class='line'>        <span class="n">ImportSettingsFile</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">KnRFormatting&amp;quot</span><span class="err">;</span><span class="p">)</span>
-</span><span class='line'>        <span class="n">DTE</span><span class="p">.</span><span class="n">ExecuteCommand</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">Edit</span><span class="p">.</span><span class="n">FormatDocument&amp;quot</span><span class="err">;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">ImportSettingsFile</span><span class="p">(</span><span class="s">&quot;KnRFormatting&quot;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">DTE</span><span class="p">.</span><span class="n">ExecuteCommand</span><span class="p">(</span><span class="s">&quot;Edit.FormatDocument&quot;</span><span class="p">)</span>
 </span><span class='line'>    <span class="k">End</span> <span class="k">Sub</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">Public</span> <span class="k">Sub</span> <span class="nf">ImportAllmanFormatting</span><span class="p">()</span>
-</span><span class='line'>        <span class="n">ImportSettingsFile</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">AllmanFormatting&amp;quot</span><span class="err">;</span><span class="p">)</span>
-</span><span class='line'>        <span class="n">DTE</span><span class="p">.</span><span class="n">ExecuteCommand</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">Edit</span><span class="p">.</span><span class="n">FormatDocument&amp;quot</span><span class="err">;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">ImportSettingsFile</span><span class="p">(</span><span class="s">&quot;AllmanFormatting&quot;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">DTE</span><span class="p">.</span><span class="n">ExecuteCommand</span><span class="p">(</span><span class="s">&quot;Edit.FormatDocument&quot;</span><span class="p">)</span>
 </span><span class='line'>    <span class="k">End</span> <span class="k">Sub</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">Private</span> <span class="k">Sub</span> <span class="nf">SetColorTheme</span><span class="p">(</span><span class="k">ByVal</span> <span class="n">fileName</span> <span class="ow">As</span> <span class="kt">String</span><span class="p">)</span>
@@ -1015,25 +997,25 @@
 </span><span class='line'>    <span class="k">End</span> <span class="k">Function</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">Private</span> <span class="k">Sub</span> <span class="nf">ImportSettingsFile</span><span class="p">(</span><span class="k">ByVal</span> <span class="n">FileName</span> <span class="ow">As</span> <span class="kt">String</span><span class="p">)</span>
-</span><span class='line'>        <span class="n">FileName</span> <span class="o">=</span> <span class="n">IO</span><span class="p">.</span><span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">RootFolder</span><span class="p">,</span> <span class="n">FileName</span> <span class="o">&amp;</span><span class="n">amp</span><span class="err">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="p">.</span><span class="n">vssettings&amp;quot</span><span class="err">;</span><span class="p">)</span>
-</span><span class='line'>        <span class="n">DTE</span><span class="p">.</span><span class="n">ExecuteCommand</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">Tools</span><span class="p">.</span><span class="n">ImportandExportSettings&amp;quot</span><span class="err">;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="o">-</span><span class="n">import</span><span class="p">:</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span> <span class="o">&amp;</span><span class="n">amp</span><span class="err">;</span> <span class="n">FileName</span> <span class="o">&amp;</span><span class="n">amp</span><span class="err">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">FileName</span> <span class="o">=</span> <span class="n">IO</span><span class="p">.</span><span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">RootFolder</span><span class="p">,</span> <span class="n">FileName</span> <span class="o">&amp;</span> <span class="s">&quot;.vssettings&quot;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">DTE</span><span class="p">.</span><span class="n">ExecuteCommand</span><span class="p">(</span><span class="s">&quot;Tools.ImportandExportSettings&quot;</span><span class="p">,</span> <span class="s">&quot;-import:&quot;&quot;&quot;</span> <span class="o">&amp;</span> <span class="n">FileName</span> <span class="o">&amp;</span> <span class="s">&quot;&quot;&quot;&quot;</span><span class="p">)</span>
 </span><span class='line'>    <span class="k">End</span> <span class="k">Sub</span>
 </span><span class='line'>
 </span><span class='line'><span class="k">End</span> <span class="k">Module</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>At this point, I threw together a toolbar and added the macros to it. They worked! Now I wanted to create some nice icons to use just like Jeff had done. It was when I was trying to apply them that disappointment crept in. Despite the <a href="http://msdn.microsoft.com/en-us/library/3dy74ad1.aspx" target="_blank">documentation for adding macros</a> to a toolbar, the comments point out correctly that you cannot assign a macro command an image. Bummer.</p>
+<p>At this point, I threw together a toolbar and added the macros to it. They worked! Now I wanted to create some nice icons to use just like Jeff had done. It was when I was trying to apply them that disappointment crept in. Despite the <a href="http://msdn.microsoft.com/en-us/library/3dy74ad1.aspx">documentation for adding macros</a> to a toolbar, the comments point out correctly that you cannot assign a macro command an image. Bummer.</p>
 
-<p>Maybe I don&rsquo;t need a toolbar. I can just hook up the macros to some easy to remember shortcut chords. Click on Tools &gt; Options&hellip; menu. Then browse to Environment &gt; Keyboard. Type Macros.Settings into the filter box and we can start assigning.</p>
+<p>Maybe I don&rsquo;t need a toolbar. I can just hook up the macros to some easy to remember shortcut chords. Click on Tools > Options&hellip; menu. Then browse to Environment > Keyboard. Type Macros.Settings into the filter box and we can start assigning.</p>
 
-<p><a href="http://thedevstop.files.wordpress.com/2011/08/options-keyboard.png"><img class="alignnone size-full wp-image-308" title="Keyboard Options" src="http://thedevstop.files.wordpress.com/2011/08/options-keyboard.png" alt="Visual Studio Keyboard Options" width="640" height="372" /></a></p>
+<p><img src="http://thedevstop.files.wordpress.com/2011/08/options-keyboard.png" alt="Keyboard Options" /></p>
 
 <p>Finding shortcut keys that weren&rsquo;t already in use was a little frustrating, so I decided to go with &ldquo;long, but simple to remember&rdquo;. Using ctrl+alt+shift as the modifiers, my chords are s (for settings) then a, c, d, k, or p depending on which macro to launch.</p>
 
-<p>Now I have no more excuses to use tiny code during my next presentation and if you follow these steps then neither will you. You can download my all of my vssettings, the macro file, and even the toolbar images I didn&rsquo;t get to use <a href="https://docs.google.com/viewer?a=v&amp;pid=explorer&amp;chrome=true&amp;srcid=0B2UumFXyeY3BYzkzMDliZjQtNjRiMC00NjdjLThhMzUtZTYxYWJiNjYyMTgx&amp;hl=en_US" target="_blank">here</a>.</p>
+<p>Now I have no more excuses to use tiny code during my next presentation and if you follow these steps then neither will you. You can download my all of my vssettings, the macro file, and even the toolbar images I didn&rsquo;t get to use <a href="https://docs.google.com/viewer?a=v&amp;pid=explorer&amp;chrome=true&amp;srcid=0B2UumFXyeY3BYzkzMDliZjQtNjRiMC00NjdjLThhMzUtZTYxYWJiNjYyMTgx&amp;hl=en_US">here</a>.</p>
 
-<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/08/16/add-settings-hotkeys-to-visual-studio-2010/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/08/16/add-settings-hotkeys-to-visual-studio-2010/">The DevStop</a>.</em></p>
 ]]></content>
   </entry>
   
@@ -1042,17 +1024,17 @@
     <link href="http://www.joeyrobichaud.com/blog/2011/02/15/sswc-and-jquery-image-rotator-on-codeplex/"/>
     <updated>2011-02-15T00:00:00-05:00</updated>
     <id>http://www.joeyrobichaud.com/blog/2011/02/15/sswc-and-jquery-image-rotator-on-codeplex</id>
-    <content type="html"><![CDATA[<p>Knowing that we had made a commitment and wanting our efforts to be utilized, we put in some extra hours to get an inital release together. <a title="John Tolar on Twitter" href="http://twitter.com/jtolar" target="_blank">John Tolar</a> emailed us his Social Share Bar widget and some screenshots for inclusion in the project. However, there were a few issues we felt must be resolved before we could release the widgets to the world.</p>
+    <content type="html"><![CDATA[<p>Knowing that we had made a commitment and wanting our efforts to be utilized, we put in some extra hours to get an inital release together. <a href="http://twitter.com/jtolar">John Tolar</a> emailed us his Social Share Bar widget and some screenshots for inclusion in the project. However, there were a few issues we felt must be resolved before we could release the widgets to the world.</p>
 
-<p>First, the <a title="jQuery Plugins on Sitefinity Forums" href="http://www.sitefinity.com/devnet/forums/sitefinity-4-x/general-discussions/jquery-plugins-and-or-authoring-custom-jquery-functions-not-supported.aspx" target="_blank">jQuery plugin issue</a> we found on <a title="GiveCamp Day 3" href="http://thedevstop.wordpress.com/2011/02/02/givecamp-day-3/" target="_blank">Day 3</a> of <a title="GiveCamp" href="http://givecamp.org" target="_blank">GiveCamp</a>. It took a good bit of trial and error, but David came up with something a little less disgusting than what we had. RegisterScriptInclude had consistently loaded the script references too early in the page, and they were subject the Sitefinity issue linked above. Using the ClientScriptManager&rsquo;s RegisterStartupScript, however, pushed the script reference to the bottom of page and avoided the redefinition of jQuery. With our scripts now being included once a piece in a fairly sensible location, we closed this issue.</p>
+<p>First, the <a href="http://www.sitefinity.com/devnet/forums/sitefinity-4-x/general-discussions/jquery-plugins-and-or-authoring-custom-jquery-functions-not-supported.aspx">jQuery plugin issue</a> we found on <a href="http://thedevstop.wordpress.com/2011/02/02/givecamp-day-3/">Day 3</a> of <a href="http://givecamp.org">GiveCamp</a>. It took a good bit of trial and error, but David came up with something a little less disgusting than what we had. RegisterScriptInclude had consistently loaded the script references too early in the page, and they were subject the Sitefinity issue linked above. Using the ClientScriptManager&rsquo;s RegisterStartupScript, however, pushed the script reference to the bottom of page and avoided the redefinition of jQuery. With our scripts now being included once a piece in a fairly sensible location, we closed this issue.</p>
 
-<p>The other two issues were fairly trivial. First, we ensured that the generated HTML elements got unique ids. We had been generating facebookImageRotator, flickrImageRotator, etc., but if you threw two Facebook rotators on the page you&rsquo;d get a duplicate. We used the user ids, album names, etc. to make it a bit more unique. The last issue was having our widgets include <a title="prettyPhoto" href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/" target="_blank">prettyPhoto</a> automatically instead of relying on documentation to guide the user.</p>
+<p>The other two issues were fairly trivial. First, we ensured that the generated HTML elements got unique ids. We had been generating facebookImageRotator, flickrImageRotator, etc., but if you threw two Facebook rotators on the page you&rsquo;d get a duplicate. We used the user ids, album names, etc. to make it a bit more unique. The last issue was having our widgets include <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">prettyPhoto</a> automatically instead of relying on documentation to guide the user.</p>
 
-<p>We polished up the documentation for Sitefinity developers interested in using the controls in their sites as well as those wanting to contribute to the project. David also started a separate CodePlex for hosting the fully independant <a title="jQuery Image Rotator on CodePlex" href="http://jqueryimagerotator.codeplex.com" target="_blank">jQuery rotator plugin</a>.</p>
+<p>We polished up the documentation for Sitefinity developers interested in using the controls in their sites as well as those wanting to contribute to the project. David also started a separate CodePlex for hosting the fully independant <a href="http://jqueryimagerotator.codeplex.com">jQuery rotator plugin</a>.</p>
 
 <p>Feel free to download the controls and please provide some feedback.</p>
 
-<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/02/15/sswc-and-jquery-image-rotator-on-codeplex/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/02/15/sswc-and-jquery-image-rotator-on-codeplex/">The DevStop</a>.</em></p>
 ]]></content>
   </entry>
   
@@ -1061,13 +1043,13 @@
     <link href="http://www.joeyrobichaud.com/blog/2011/02/08/givecamp-day-3/"/>
     <updated>2011-02-08T00:00:00-05:00</updated>
     <id>http://www.joeyrobichaud.com/blog/2011/02/08/givecamp-day-3</id>
-    <content type="html"><![CDATA[<p>So you know how I was saying the rest of our team worked overnight? Yeah. David and I woke up to some huge news! It seems that it had been decided to switch to <a title="Wordpress" href="http://wordpress.org" target="_blank">WordPress</a>, although John reassured us that our efforts would not be in vain. He proposed packaging our widgets into an <a title="Sitefinity Social Widgets Contrib on Codeplex" href="http://sswc.codeplex.com" target="_blank">open source contribution</a> to the <a title="Sitefinity" href="http://sitefinity.com" target="_blank">Sitefinity</a> community. These widgets could be used in future <a title="GiveCamp" href="http://givecamp.org" target="_blank">GiveCamp</a> projects to help many more charities, but first they would need some love. (First, we fueled up at IHOP with <a title="Joshua Rogers" href="http://joshuarogers.net" target="_blank">Josh</a> and <a title="Bryan Price" href="http://bryanprice.info" target="_blank">Bryan</a>. It was great to hang out a bit and share war stories, since we didn&rsquo;t get to do that much at the event itself.)</p>
+    <content type="html"><![CDATA[<p>So you know how I was saying the rest of our team worked overnight? Yeah. David and I woke up to some huge news! It seems that it had been decided to switch to <a href="http://wordpress.org">WordPress</a>, although John reassured us that our efforts would not be in vain. He proposed packaging our widgets into an <a href="http://sswc.codeplex.com">open source contribution</a> to the <a href="http://sitefinity.com">Sitefinity</a> community. These widgets could be used in future <a href="http://givecamp.org">GiveCamp</a> projects to help many more charities, but first they would need some love. (First, we fueled up at IHOP with <a href="http://joshuarogers.net">Josh</a> and <a href="http://bryanprice.info">Bryan</a>. It was great to hang out a bit and share war stories, since we didn&rsquo;t get to do that much at the event itself.)</p>
 
 <p>We decided that the rest of our day would be devoted to cleaning up code and writing documentation. We started by pulling out a lot of shared code into a helper class used by the rotator widgets. The next task was to refactor our inline JavaScript to be a jQuery plugin. We would invoke the imageRotator method on the containing element, passing in the image list and rotation interval.</p>
 
-<p>Speaking of plugins, it was this that lead us to discover David&rsquo;s issue with <a title="prettyPhoto" href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/" target="_blank">prettyPhoto</a>. It seems that Sitefinity <a title="jQuery Plugins on Sitefinity Forums" href="http://www.sitefinity.com/devnet/forums/sitefinity-4-x/general-discussions/jquery-plugins-and-or-authoring-custom-jquery-functions-not-supported.aspx" target="_blank">can trip you up</a> when loading your script references. Our temporary solution was to embed the script references in the widgets themselves. The obvious issue is that the generated HTML would have several duplicate references scattered throughout the body. We&rsquo;ll discuss a slightly more elegant solution in an upcoming post.</p>
+<p>Speaking of plugins, it was this that lead us to discover David&rsquo;s issue with <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">prettyPhoto</a>. It seems that Sitefinity <a href="http://www.sitefinity.com/devnet/forums/sitefinity-4-x/general-discussions/jquery-plugins-and-or-authoring-custom-jquery-functions-not-supported.aspx">can trip you up</a> when loading your script references. Our temporary solution was to embed the script references in the widgets themselves. The obvious issue is that the generated HTML would have several duplicate references scattered throughout the body. We&rsquo;ll discuss a slightly more elegant solution in an upcoming post.</p>
 
-<p>Our project also needed a home. We decided on using <a title="CodePlex" href="http://codeplex.com" target="_blank">CodePlex</a> to host the widgets. I created the <a title="SSWC on CodePlex" href="http://sswc.codeplex.com" target="_blank">SSWC project</a> and started working on documentation. Time was short due to the upcoming wrap-up where the fruits of the weekend would be displayed.  We would have to put the finishing touches on our project another day. We&rsquo;ll discuss this in an upcoming post.</p>
+<p>Our project also needed a home. We decided on using <a href="http://codeplex.com">CodePlex</a> to host the widgets. I created the <a href="http://sswc.codeplex.com">SSWC project</a> and started working on documentation. Time was short due to the upcoming wrap-up where the fruits of the weekend would be displayed.  We would have to put the finishing touches on our project another day. We&rsquo;ll discuss this in an upcoming post.</p>
 
 <p>During the wrap-up, it was great to see how all the teams pulled together to produce effective solutions for these worthy organizations.</p>
 
@@ -1076,7 +1058,7 @@
 
 <p><a href="http://vimeo.com/19132894">Give Camp Birmingham | Promo</a> from <a href="http://vimeo.com/user445453">Hampton Road Studios</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
 
-<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/02/08/givecamp-day-3/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/02/08/givecamp-day-3/">The DevStop</a>.</em></p>
 ]]></content>
   </entry>
   
@@ -1087,23 +1069,23 @@
     <id>http://www.joeyrobichaud.com/blog/2011/02/04/givecamp-day-2</id>
     <content type="html"><![CDATA[<p>After a refreshing 6 hours of sleep, we met the following morning!</p>
 
-<p>The first task we had before us was to implement a simple widget to learn the <a title="Sitefinity" href="http://sitefinity.com" target="_blank">Sitefinity</a> APIs. For the sake of tradition, we implemented a &lsquo;Hello World&rsquo; widget which simply displayed a configurable message in a &lt;span&gt; tag. Using one of their included widgets as a starting point, it did not take long until we had our widget put together. John shot us a very helpful PDF that included the instructions to register the widget with our local Sitefinity instance, and we were off running!</p>
+<p>The first task we had before us was to implement a simple widget to learn the <a href="http://sitefinity.com">Sitefinity</a> APIs. For the sake of tradition, we implemented a &lsquo;Hello World&rsquo; widget which simply displayed a configurable message in a <span> tag. Using one of their included widgets as a starting point, it did not take long until we had our widget put together. John shot us a very helpful PDF that included the instructions to register the widget with our local Sitefinity instance, and we were off running!</p>
 
 <p>Several of the widgets that we needed to implement were image rotating controls. The first of the Social Widgets to be implemented was a Facebook image rotator. Since we saw a lot of potential overlap, we worked on this widget together so that we could both have input on the pattern we&rsquo;d follow for the others.</p>
 
-<p>The first step to implementing the Facebook widget was to pull a list of images from the Facebook API. We registered a Facebook application with Joy&rsquo;s account and added the application to the <a title="Spirit of Hope Youth Ranch on Facebook" href="https://www.facebook.com/pages/Spirit-of-Hope-Youth-Ranch/66363425238" target="_blank">SOHYR Facebook</a> page. After trying various FBML and FQL queries, we discovered the <a title="Facebook C# SDK on Codeplex" href="http://facebooksdk.codeplex.com/" target="_blank">Facebook C# SDK</a>. After a little tweaking, we were able to pull in recent images from an account with an option to limit it to a specific album.</p>
+<p>The first step to implementing the Facebook widget was to pull a list of images from the Facebook API. We registered a Facebook application with Joy&rsquo;s account and added the application to the <a href="https://www.facebook.com/pages/Spirit-of-Hope-Youth-Ranch/66363425238">Spirit of Hope Youth Ranch on Facebook</a> page. After trying various FBML and FQL queries, we discovered the [Facebook C# SDK](<a href="http://facebooksdk.codeplex.com/">http://facebooksdk.codeplex.com/</a>]. After a little tweaking, we were able to pull in recent images from an account with an option to limit it to a specific album.</p>
 
 <p>With this out of the way, we focused on implementing the image rotation. While David had been focusing on implementing the Facebook query, I had been writing a little jQuery in Notepad++. I shared this with David, and we soon had a working image rotator.</p>
 
-<p>Mixing these two pieces together got us most of the functionality. All that remained was adding a lightbox when the image was clicked. A quick Google search later and we had decided that <a title="prettyPhoto" href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/" target="_blank">prettyPhoto</a> had the right mix of style and functionality.</p>
+<p>Mixing these two pieces together got us most of the functionality. All that remained was adding a lightbox when the image was clicked. A quick Google search later and we had decided that <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">prettyPhoto</a> had the right mix of style and functionality.</p>
 
-<p>Now that we had the first component mostly put together, I proceeded to implement a Flickr rotator while David incorporated the prettyPhoto plugin. I was much more successful than David (through no fault of his own &ndash; stay tuned for Day 3 to find out what happened!). I was able to reuse the query from another baked-in Flickr widget for pulling images from a user account. The most difficult part was determining the user id to use in the query. Luckily there is a <a title="idGettr" href="http://idgettr.com/" target="_blank">handy site</a> for getting the user id from a Flickr user name.</p>
+<p>Now that we had the first component mostly put together, I proceeded to implement a Flickr rotator while David incorporated the prettyPhoto plugin. I was much more successful than David (through no fault of his own &ndash; stay tuned for Day 3 to find out what happened!). I was able to reuse the query from another baked-in Flickr widget for pulling images from a user account. The most difficult part was determining the user id to use in the query. Luckily there is a <a href="http://idgettr.com/">handy site</a> for getting the user id from a Flickr user name.</p>
 
 <p>With Dave seemingly at a dead end trying to get jQuery plugins working with Sitefinity, I proceeded to knockout the YouTube video rotator widget. By this point the host facility was shutting down, but the other members of our team had plans to work overnight. They were battling some layout issues getting Sitefinity to play nice with Brant&rsquo;s design. We felt we had a firm grasp on our task, so we headed home to get some much needed shut eye.</p>
 
-<p>Also, I fell  on some wickedly icy stairs, and David&rsquo;s car battery died. <a title="Bryan Price" href="http://bryanprice.info" target="_blank">Bryan</a> and <a title="Joshua Rogers" href="http://joshuarogers.net" target="_blank">Josh</a>, who were crashing at Dave&rsquo;s place, made a great rescue team. Thanks, guys!</p>
+<p>Also, I fell on some wickedly icy stairs, and David&rsquo;s car battery died. <a href="http://bryanprice.info">Bryan</a> and <a href="http://joshuarogers.net">Josh</a>, who were crashing at Dave&rsquo;s place, made a great rescue team. Thanks, guys!</p>
 
-<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/02/04/givecamp-day-2/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/02/04/givecamp-day-2/">The DevStop</a>.</em></p>
 ]]></content>
   </entry>
   
@@ -1112,23 +1094,23 @@
     <link href="http://www.joeyrobichaud.com/blog/2011/02/01/givecamp-day-1/"/>
     <updated>2011-02-01T00:00:00-05:00</updated>
     <id>http://www.joeyrobichaud.com/blog/2011/02/01/givecamp-day-1</id>
-    <content type="html"><![CDATA[<p>This was the first year that Birmingham hosted a satellite event for the national <a title="GiveCamp" href="http://givecamp.org/" target="_blank">GiveCamp</a>. For those who don&rsquo;t know, GiveCamp is a event where developers and designers come together to donate their efforts to charity and non-profit organizations. Wanting to help the community and being located so close, we thought this was the perfect opportunity to share our skills.</p>
+    <content type="html"><![CDATA[<p>This was the first year that Birmingham hosted a satellite event for the national <a href="http://givecamp.org/">GiveCamp</a>. For those who don&rsquo;t know, GiveCamp is a event where developers and designers come together to donate their efforts to charity and non-profit organizations. Wanting to help the community and being located so close, we thought this was the perfect opportunity to share our skills.</p>
 
-<p>The <a title="GiveCamp Birmingham" href="http://givecampbirmingham.org/" target="_blank">Birmingham GiveCamp</a> was organized by <a title="Leverett Powell on Twitter" href="https://twitter.com/#!/LeverettPowell" target="_blank">Leverett Powell</a>, and three charities participated. <a title="Spirit of Hope Youth Ranch" href="http://sohyr.org" target="_blank">Spirit of Hope Youth Ranch</a> brings children with abused pasts together with abused horses. <a title="My Father's House on Manta" href="http://www.manta.com/c/mml1r6r/my-father-s-house-foundation-inc" target="_blank">My Father&rsquo;s House</a> takes in children who have outgrown foster care. Lastly, <a title="Innovation Depot" href="http://www.innovationdepot.net/" target="_blank">Innovation Depot</a> a non-profit business incubator.</p>
+<p>The <a href="http://givecampbirmingham.org/">GiveCamp Birmingham</a> was organized by <a href="https://twitter.com/#!/LeverettPowell">Leverett Powell</a>, and three charities participated. <a href="http://sohyr.org">Spirit of Hope Youth Ranch</a> brings children with abused pasts together with abused horses. <a href="http://www.manta.com/c/mml1r6r/my-father-s-house-foundation-inc">My Father&rsquo;s House</a> takes in children who have outgrown foster care. Lastly, <a href="http://www.innovationdepot.net/">Innovation Depot</a> a non-profit business incubator.</p>
 
-<p>Originally we had planned to form a team with a <a title="Bryan Price" href="http://bryanprice.info" target="_blank">couple</a> of <a title="Joshua Rogers" href="http://joshuarogers.net" target="_blank">coworkers</a> so that we could jam together. However, because of inclement weather the previous week, developer turnout was low and we had to split up. The charity we ended up working with was Spirit of Hope Youth Ranch.</p>
+<p>Originally we had planned to form a team with a <a href="http://bryanprice.info">couple</a> of <a href="http://joshuarogers.net">coworkers</a> so that we could jam together. However, because of inclement weather the previous week, developer turnout was low and we had to split up. The charity we ended up working with was Spirit of Hope Youth Ranch.</p>
 
-<p>The first night was used for team introductions and requirements gathering. Our team was rounded out by <a title="John Tolar on Twitter" href="https://twitter.com/#!/jtolar/" target="_blank">John Tolar</a> who acted as Interim PM for the first night, <a title="Litepack on Google Profiles" href="http://www.google.com/profiles/litepack" target="_blank">Brant Powell</a> as lead designer, and <a title="Rebecca Lynn Morrow" href="http://rebeccalynnmorrow.com/" target="_blank">Rebecca Morrow</a> as SEO Guru.</p>
+<p>The first night was used for team introductions and requirements gathering. Our team was rounded out by <a href="https://twitter.com/#!/jtolar/">John Tolar</a> who acted as Interim PM for the first night, <a href="http://www.google.com/profiles/litepack">Litepack on Google Profiles</a> as lead designer, and <a href="http://rebeccalynnmorrow.com/">Rebecca Lynn Morrow</a> as SEO Guru.</p>
 
 <p>SOHYR was represented by Joy O&#8217;Neal. She did a great job expressing what she was looking for in the new website. We spent a good deal of time discussing the site map and social integration. Joy was very well prepared with images, videos and logos to use in the design.</p>
 
-<p>John Tolar turned us on to <a title="Sitefinity" href="http://www.sitefinity.com/" target="_blank">Sitefinity</a>, a product that was generously donated by <a title="Telerik" href="http://telerik.com" target="_blank">Telerik</a> for all GiveCamp charities to use in their projects. Version 4.0 had just been released and John had experience building on previous versions of the platform. It showed strong layout and widgeting capabilities.</p>
+<p>John Tolar turned us on to <a href="http://www.sitefinity.com/">Sitefinity</a>, a product that was generously donated by <a href="http://telerik.com">Telerik</a> for all GiveCamp charities to use in their projects. Version 4.0 had just been released and John had experience building on previous versions of the platform. It showed strong layout and widgeting capabilities.</p>
 
 <p>To round the social experience of the website, a list of missing widgets was compiled for development during the rest of the weekend. It was decided that David and I would focus on implementing these widgets. Brant would be in charge of the site layout and CSS while John would be responsible for applying that design to a Sitefinity instance. John would also contribute to the social widgets as time allowed. Rebecca would help Joy with rewording pages for SEO.</p>
 
 <p>Everyone retired enthusiastically anticipating the work to come.</p>
 
-<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/02/02/givecamp-day-1/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/02/02/givecamp-day-1/">The DevStop</a>.</em></p>
 ]]></content>
   </entry>
   

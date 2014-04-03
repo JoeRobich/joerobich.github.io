@@ -91,27 +91,27 @@
   </header>
 
 
-<div class="entry-content"><p>On several occasions I have presented topics to my team during our monthly lunch and learns. These presentations almost always include code samples and complaints about font size. Although I had read, I have never taken Scott Hanselman&rsquo;s advice for <a href="http://www.hanselman.com/blog/TheGuideToCreatingQualityTechnicalScreencasts.aspx" target="_blank">preparing for a screencast</a>. Most of which are applicable when presenting.</p>
+<div class="entry-content"><p>On several occasions I have presented topics to my team during our monthly lunch and learns. These presentations almost always include code samples and complaints about font size. Although I had read, I have never taken Scott Hanselman&rsquo;s advice for <a href="http://www.hanselman.com/blog/TheGuideToCreatingQualityTechnicalScreencasts.aspx">preparing for a screencast</a>. Most of which are applicable when presenting.</p>
 
 <blockquote><p>&ldquo;Use the standard Visual Studio Font Colors&hellip; change your fonts to Consolas Size 15.&rdquo;</p></blockquote>
 
-<p>Oh no! I haven&rsquo;t used the default Visual Studio theme since I ran across Rob Conery&#8217;s <a href="http://blog.wekeroad.com/2007/10/17/textmate-theme-for-visual-studio-take-2/" target="_blank">Vibrant Ink theme</a> (which should be shipped as the defaults IMHO). It would be nice if Visual Studio made it simple to switch between various configurations on the fly.</p>
+<p>Oh no! I haven&rsquo;t used the default Visual Studio theme since I ran across Rob Conery&#8217;s <a href="http://blog.wekeroad.com/2007/10/17/textmate-theme-for-visual-studio-take-2/">Vibrant Ink theme</a> (which should be shipped as the defaults IMHO). It would be nice if Visual Studio made it simple to switch between various configurations on the fly.</p>
 
 <p>Then last week I saw <a href="http://twitter.com/#!/JeffHandley/status/101520788745756672" target="_blank">this tweet</a> come through my feed.</p>
 
-<blockquote><p><a href="http://thedevstop.files.wordpress.com/2011/08/tweet.png"><img class="size-full wp-image-303" title="Tweet" src="http://thedevstop.files.wordpress.com/2011/08/tweet.png" alt="Tweet &quot;That's where my settings helpers come in handy.&quot;" width="544" height="223" /></a></p></blockquote>
+<blockquote><p><img src="http://thedevstop.files.wordpress.com/2011/08/tweet.png" alt="Tweet" /></p></blockquote>
 
 <p>That&rsquo;s it. I decided that today was the day for change. Jeff Handley&rsquo;s macros make it dead simple to go from development to presentation mode on the fly.</p>
 
 <p>There are just a few things that I wanted to tweak. First, I found switching to presentation mode took too long, and I thought it would be simpler to just change the font size. Second, I wanted to be able to switch between the default theme and my theme quickly and without affecting font size.</p>
 
-<p>With this in mind, I needed to export the default Visual Studio colors and the Vibrant Ink themes. To make switching themes short, I only exported Options &gt; Environment &gt; Fonts and Colors.</p>
+<p>With this in mind, I needed to export the default Visual Studio colors and the Vibrant Ink themes. To make switching themes short, I only exported Options > Environment > Fonts and Colors.</p>
 
-<p><a href="http://thedevstop.files.wordpress.com/2011/08/fonts-and-colors.png"><img class="alignnone size-full wp-image-329" title="fonts-and-colors" src="http://thedevstop.files.wordpress.com/2011/08/fonts-and-colors.png" alt="Export Fonts and Colors" width="631" height="565" /></a></p>
+<p><img src="http://thedevstop.files.wordpress.com/2011/08/fonts-and-colors.png" alt="fonts-and-colors" /></p>
 
-<p>Next, I launched Tools &gt; Macros &gt; Macros IDE&hellip; and got to work. Using Jeff&rsquo;s macros as the base I started making my changes. So instead of loading settings for presentations, I made the macro toggle the font size between 10 and 15. When applying a change to the theme I made sure to remember the current font size and set it back after loading either the default theme or my own. Although I struggled a bit with the Visual Basic syntax, it wasn&rsquo;t long until I was finished.</p>
+<p>Next, I launched Tools > Macros > Macros IDE&hellip; and got to work. Using Jeff&rsquo;s macros as the base I started making my changes. So instead of loading settings for presentations, I made the macro toggle the font size between 10 and 15. When applying a change to the theme I made sure to remember the current font size and set it back after loading either the default theme or my own. Although I struggled a bit with the Visual Basic syntax, it wasn&rsquo;t long until I was finished.</p>
 
-<p>Below is the modified <a href="https://github.com/JoeRobich/BlogCode/blob/master/Settings.vb" target="_blank">Settings macros</a> that I use.</p>
+<p>Below is the modified <a href="https://github.com/JoeRobich/BlogCode/blob/master/Settings.vb">Settings macros</a> that I use.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -188,18 +188,18 @@
 </span><span class='line'><span class="k">Imports</span> <span class="nn">System.Diagnostics</span>
 </span><span class='line'>
 </span><span class='line'><span class="k">Public</span> <span class="k">Module</span> <span class="nn">Settings</span>
-</span><span class='line'>    <span class="k">Private</span> <span class="k">Const</span> <span class="n">FONT_SIZE_CATEGORY</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">FontsAndColors&amp;quot</span><span class="err">;</span>
-</span><span class='line'>    <span class="k">Private</span> <span class="k">Const</span> <span class="n">FONT_SIZE_PAGE</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">TextEditor&amp;quot</span><span class="err">;</span>
-</span><span class='line'>    <span class="k">Private</span> <span class="k">Const</span> <span class="n">FONT_SIZE_NAME</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">FontSize&amp;quot</span><span class="err">;</span>
+</span><span class='line'>    <span class="k">Private</span> <span class="k">Const</span> <span class="n">FONT_SIZE_CATEGORY</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">&quot;FontsAndColors&quot;</span>
+</span><span class='line'>    <span class="k">Private</span> <span class="k">Const</span> <span class="n">FONT_SIZE_PAGE</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">&quot;TextEditor&quot;</span>
+</span><span class='line'>    <span class="k">Private</span> <span class="k">Const</span> <span class="n">FONT_SIZE_NAME</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">&quot;FontSize&quot;</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="k">Private</span> <span class="n">RootFolder</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">quot</span><span class="err">;[</span><span class="n">Your</span> <span class="n">Root</span><span class="err">]</span><span class="o">\</span><span class="n">Documents</span><span class="o">\</span><span class="n">Visual</span> <span class="n">Studio</span> <span class="mi">2010</span><span class="o">\</span><span class="n">Settings</span><span class="o">\&amp;</span><span class="n">quot</span><span class="err">;</span>
+</span><span class='line'>    <span class="k">Private</span> <span class="n">RootFolder</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">&quot;[Your Root]\Documents\Visual Studio 2010\Settings\&quot;</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">Public</span> <span class="k">Sub</span> <span class="nf">ImportDefaultSettings</span><span class="p">()</span>
-</span><span class='line'>        <span class="n">SetColorTheme</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">DefaultTheme&amp;quot</span><span class="err">;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">SetColorTheme</span><span class="p">(</span><span class="s">&quot;DefaultTheme&quot;</span><span class="p">)</span>
 </span><span class='line'>    <span class="k">End</span> <span class="k">Sub</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">Public</span> <span class="k">Sub</span> <span class="nf">ImportCodingSettings</span><span class="p">()</span>
-</span><span class='line'>        <span class="n">SetColorTheme</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">VibrantInkTheme&amp;quot</span><span class="err">;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">SetColorTheme</span><span class="p">(</span><span class="s">&quot;VibrantInkTheme&quot;</span><span class="p">)</span>
 </span><span class='line'>    <span class="k">End</span> <span class="k">Sub</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">Public</span> <span class="k">Sub</span> <span class="nf">TogglePresentationSettings</span><span class="p">()</span>
@@ -213,13 +213,13 @@
 </span><span class='line'>    <span class="k">End</span> <span class="k">Sub</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">Public</span> <span class="k">Sub</span> <span class="nf">ImportKnRFormatting</span><span class="p">()</span>
-</span><span class='line'>        <span class="n">ImportSettingsFile</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">KnRFormatting&amp;quot</span><span class="err">;</span><span class="p">)</span>
-</span><span class='line'>        <span class="n">DTE</span><span class="p">.</span><span class="n">ExecuteCommand</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">Edit</span><span class="p">.</span><span class="n">FormatDocument&amp;quot</span><span class="err">;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">ImportSettingsFile</span><span class="p">(</span><span class="s">&quot;KnRFormatting&quot;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">DTE</span><span class="p">.</span><span class="n">ExecuteCommand</span><span class="p">(</span><span class="s">&quot;Edit.FormatDocument&quot;</span><span class="p">)</span>
 </span><span class='line'>    <span class="k">End</span> <span class="k">Sub</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">Public</span> <span class="k">Sub</span> <span class="nf">ImportAllmanFormatting</span><span class="p">()</span>
-</span><span class='line'>        <span class="n">ImportSettingsFile</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">AllmanFormatting&amp;quot</span><span class="err">;</span><span class="p">)</span>
-</span><span class='line'>        <span class="n">DTE</span><span class="p">.</span><span class="n">ExecuteCommand</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">Edit</span><span class="p">.</span><span class="n">FormatDocument&amp;quot</span><span class="err">;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">ImportSettingsFile</span><span class="p">(</span><span class="s">&quot;AllmanFormatting&quot;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">DTE</span><span class="p">.</span><span class="n">ExecuteCommand</span><span class="p">(</span><span class="s">&quot;Edit.FormatDocument&quot;</span><span class="p">)</span>
 </span><span class='line'>    <span class="k">End</span> <span class="k">Sub</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">Private</span> <span class="k">Sub</span> <span class="nf">SetColorTheme</span><span class="p">(</span><span class="k">ByVal</span> <span class="n">fileName</span> <span class="ow">As</span> <span class="kt">String</span><span class="p">)</span>
@@ -240,25 +240,25 @@
 </span><span class='line'>    <span class="k">End</span> <span class="k">Function</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">Private</span> <span class="k">Sub</span> <span class="nf">ImportSettingsFile</span><span class="p">(</span><span class="k">ByVal</span> <span class="n">FileName</span> <span class="ow">As</span> <span class="kt">String</span><span class="p">)</span>
-</span><span class='line'>        <span class="n">FileName</span> <span class="o">=</span> <span class="n">IO</span><span class="p">.</span><span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">RootFolder</span><span class="p">,</span> <span class="n">FileName</span> <span class="o">&amp;</span><span class="n">amp</span><span class="err">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="p">.</span><span class="n">vssettings&amp;quot</span><span class="err">;</span><span class="p">)</span>
-</span><span class='line'>        <span class="n">DTE</span><span class="p">.</span><span class="n">ExecuteCommand</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="n">Tools</span><span class="p">.</span><span class="n">ImportandExportSettings&amp;quot</span><span class="err">;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="o">-</span><span class="n">import</span><span class="p">:</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span> <span class="o">&amp;</span><span class="n">amp</span><span class="err">;</span> <span class="n">FileName</span> <span class="o">&amp;</span><span class="n">amp</span><span class="err">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="o">&amp;</span><span class="n">quot</span><span class="err">;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">FileName</span> <span class="o">=</span> <span class="n">IO</span><span class="p">.</span><span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">RootFolder</span><span class="p">,</span> <span class="n">FileName</span> <span class="o">&amp;</span> <span class="s">&quot;.vssettings&quot;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">DTE</span><span class="p">.</span><span class="n">ExecuteCommand</span><span class="p">(</span><span class="s">&quot;Tools.ImportandExportSettings&quot;</span><span class="p">,</span> <span class="s">&quot;-import:&quot;&quot;&quot;</span> <span class="o">&amp;</span> <span class="n">FileName</span> <span class="o">&amp;</span> <span class="s">&quot;&quot;&quot;&quot;</span><span class="p">)</span>
 </span><span class='line'>    <span class="k">End</span> <span class="k">Sub</span>
 </span><span class='line'>
 </span><span class='line'><span class="k">End</span> <span class="k">Module</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>At this point, I threw together a toolbar and added the macros to it. They worked! Now I wanted to create some nice icons to use just like Jeff had done. It was when I was trying to apply them that disappointment crept in. Despite the <a href="http://msdn.microsoft.com/en-us/library/3dy74ad1.aspx" target="_blank">documentation for adding macros</a> to a toolbar, the comments point out correctly that you cannot assign a macro command an image. Bummer.</p>
+<p>At this point, I threw together a toolbar and added the macros to it. They worked! Now I wanted to create some nice icons to use just like Jeff had done. It was when I was trying to apply them that disappointment crept in. Despite the <a href="http://msdn.microsoft.com/en-us/library/3dy74ad1.aspx">documentation for adding macros</a> to a toolbar, the comments point out correctly that you cannot assign a macro command an image. Bummer.</p>
 
-<p>Maybe I don&rsquo;t need a toolbar. I can just hook up the macros to some easy to remember shortcut chords. Click on Tools &gt; Options&hellip; menu. Then browse to Environment &gt; Keyboard. Type Macros.Settings into the filter box and we can start assigning.</p>
+<p>Maybe I don&rsquo;t need a toolbar. I can just hook up the macros to some easy to remember shortcut chords. Click on Tools > Options&hellip; menu. Then browse to Environment > Keyboard. Type Macros.Settings into the filter box and we can start assigning.</p>
 
-<p><a href="http://thedevstop.files.wordpress.com/2011/08/options-keyboard.png"><img class="alignnone size-full wp-image-308" title="Keyboard Options" src="http://thedevstop.files.wordpress.com/2011/08/options-keyboard.png" alt="Visual Studio Keyboard Options" width="640" height="372" /></a></p>
+<p><img src="http://thedevstop.files.wordpress.com/2011/08/options-keyboard.png" alt="Keyboard Options" /></p>
 
 <p>Finding shortcut keys that weren&rsquo;t already in use was a little frustrating, so I decided to go with &ldquo;long, but simple to remember&rdquo;. Using ctrl+alt+shift as the modifiers, my chords are s (for settings) then a, c, d, k, or p depending on which macro to launch.</p>
 
-<p>Now I have no more excuses to use tiny code during my next presentation and if you follow these steps then neither will you. You can download my all of my vssettings, the macro file, and even the toolbar images I didn&rsquo;t get to use <a href="https://docs.google.com/viewer?a=v&amp;pid=explorer&amp;chrome=true&amp;srcid=0B2UumFXyeY3BYzkzMDliZjQtNjRiMC00NjdjLThhMzUtZTYxYWJiNjYyMTgx&amp;hl=en_US" target="_blank">here</a>.</p>
+<p>Now I have no more excuses to use tiny code during my next presentation and if you follow these steps then neither will you. You can download my all of my vssettings, the macro file, and even the toolbar images I didn&rsquo;t get to use <a href="https://docs.google.com/viewer?a=v&amp;pid=explorer&amp;chrome=true&amp;srcid=0B2UumFXyeY3BYzkzMDliZjQtNjRiMC00NjdjLThhMzUtZTYxYWJiNjYyMTgx&amp;hl=en_US">here</a>.</p>
 
-<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/08/16/add-settings-hotkeys-to-visual-studio-2010/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/08/16/add-settings-hotkeys-to-visual-studio-2010/">The DevStop</a>.</em></p>
 </div>
 
 
