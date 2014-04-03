@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Joey Robichaud</title>
+  <meta name="author" content="Joey Robichaud">
+
+  
+  <meta name="description" content="So you know how I was saying the rest of our team worked overnight? Yeah. David and I woke up to some huge news! It seems that it had been decided to &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.joeyrobichaud.com/blog/page/2">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Joey Robichaud" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Joey Robichaud</a></h1>
+  
+    <h2>code and thoughts</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.joeyrobichaud.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/08/givecamp-day-3/">GiveCamp Day 3</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-08T00:00:00-05:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So you know how I was saying the rest of our team worked overnight? Yeah. David and I woke up to some huge news! It seems that it had been decided to switch to <a title="Wordpress" href="http://wordpress.org" target="_blank">WordPress</a>, although John reassured us that our efforts would not be in vain. He proposed packaging our widgets into an <a title="Sitefinity Social Widgets Contrib on Codeplex" href="http://sswc.codeplex.com" target="_blank">open source contribution</a> to the <a title="Sitefinity" href="http://sitefinity.com" target="_blank">Sitefinity</a> community. These widgets could be used in future <a title="GiveCamp" href="http://givecamp.org" target="_blank">GiveCamp</a> projects to help many more charities, but first they would need some love. (First, we fueled up at IHOP with <a title="Joshua Rogers" href="http://joshuarogers.net" target="_blank">Josh</a> and <a title="Bryan Price" href="http://bryanprice.info" target="_blank">Bryan</a>. It was great to hang out a bit and share war stories, since we didn&rsquo;t get to do that much at the event itself.)</p>
+
+<p>We decided that the rest of our day would be devoted to cleaning up code and writing documentation. We started by pulling out a lot of shared code into a helper class used by the rotator widgets. The next task was to refactor our inline JavaScript to be a jQuery plugin. We would invoke the imageRotator method on the containing element, passing in the image list and rotation interval.</p>
+
+<p>Speaking of plugins, it was this that lead us to discover David&rsquo;s issue with <a title="prettyPhoto" href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/" target="_blank">prettyPhoto</a>. It seems that Sitefinity <a title="jQuery Plugins on Sitefinity Forums" href="http://www.sitefinity.com/devnet/forums/sitefinity-4-x/general-discussions/jquery-plugins-and-or-authoring-custom-jquery-functions-not-supported.aspx" target="_blank">can trip you up</a> when loading your script references. Our temporary solution was to embed the script references in the widgets themselves. The obvious issue is that the generated HTML would have several duplicate references scattered throughout the body. We&rsquo;ll discuss a slightly more elegant solution in an upcoming post.</p>
+
+<p>Our project also needed a home. We decided on using <a title="CodePlex" href="http://codeplex.com" target="_blank">CodePlex</a> to host the widgets. I created the <a title="SSWC on CodePlex" href="http://sswc.codeplex.com" target="_blank">SSWC project</a> and started working on documentation. Time was short due to the upcoming wrap-up where the fruits of the weekend would be displayed.  We would have to put the finishing touches on our project another day. We&rsquo;ll discuss this in an upcoming post.</p>
+
+<p>During the wrap-up, it was great to see how all the teams pulled together to produce effective solutions for these worthy organizations.</p>
+
+<div class="embed-video-container"><iframe src="http://player.vimeo.com/video/19132894 "></iframe></div>
+
+
+<p><a href="http://vimeo.com/19132894">Give Camp Birmingham | Promo</a> from <a href="http://vimeo.com/user445453">Hampton Road Studios</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/02/08/givecamp-day-3/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/04/givecamp-day-2/">GiveCamp Day 2</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-04T00:00:00-05:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After a refreshing 6 hours of sleep, we met the following morning!</p>
+
+<p>The first task we had before us was to implement a simple widget to learn the <a title="Sitefinity" href="http://sitefinity.com" target="_blank">Sitefinity</a> APIs. For the sake of tradition, we implemented a &lsquo;Hello World&rsquo; widget which simply displayed a configurable message in a &lt;span&gt; tag. Using one of their included widgets as a starting point, it did not take long until we had our widget put together. John shot us a very helpful PDF that included the instructions to register the widget with our local Sitefinity instance, and we were off running!</p>
+
+<p>Several of the widgets that we needed to implement were image rotating controls. The first of the Social Widgets to be implemented was a Facebook image rotator. Since we saw a lot of potential overlap, we worked on this widget together so that we could both have input on the pattern we&rsquo;d follow for the others.</p>
+
+<p>The first step to implementing the Facebook widget was to pull a list of images from the Facebook API. We registered a Facebook application with Joy&rsquo;s account and added the application to the <a title="Spirit of Hope Youth Ranch on Facebook" href="https://www.facebook.com/pages/Spirit-of-Hope-Youth-Ranch/66363425238" target="_blank">SOHYR Facebook</a> page. After trying various FBML and FQL queries, we discovered the <a title="Facebook C# SDK on Codeplex" href="http://facebooksdk.codeplex.com/" target="_blank">Facebook C# SDK</a>. After a little tweaking, we were able to pull in recent images from an account with an option to limit it to a specific album.</p>
+
+<p>With this out of the way, we focused on implementing the image rotation. While David had been focusing on implementing the Facebook query, I had been writing a little jQuery in Notepad++. I shared this with David, and we soon had a working image rotator.</p>
+
+<p>Mixing these two pieces together got us most of the functionality. All that remained was adding a lightbox when the image was clicked. A quick Google search later and we had decided that <a title="prettyPhoto" href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/" target="_blank">prettyPhoto</a> had the right mix of style and functionality.</p>
+
+<p>Now that we had the first component mostly put together, I proceeded to implement a Flickr rotator while David incorporated the prettyPhoto plugin. I was much more successful than David (through no fault of his own &ndash; stay tuned for Day 3 to find out what happened!). I was able to reuse the query from another baked-in Flickr widget for pulling images from a user account. The most difficult part was determining the user id to use in the query. Luckily there is a <a title="idGettr" href="http://idgettr.com/" target="_blank">handy site</a> for getting the user id from a Flickr user name.</p>
+
+<p>With Dave seemingly at a dead end trying to get jQuery plugins working with Sitefinity, I proceeded to knockout the YouTube video rotator widget. By this point the host facility was shutting down, but the other members of our team had plans to work overnight. They were battling some layout issues getting Sitefinity to play nice with Brant&rsquo;s design. We felt we had a firm grasp on our task, so we headed home to get some much needed shut eye.</p>
+
+<p>Also, I fell  on some wickedly icy stairs, and David&rsquo;s car battery died. <a title="Bryan Price" href="http://bryanprice.info" target="_blank">Bryan</a> and <a title="Joshua Rogers" href="http://joshuarogers.net" target="_blank">Josh</a>, who were crashing at Dave&rsquo;s place, made a great rescue team. Thanks, guys!</p>
+
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/02/04/givecamp-day-2/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/01/givecamp-day-1/">GiveCamp Day 1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-01T00:00:00-05:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This was the first year that Birmingham hosted a satellite event for the national <a title="GiveCamp" href="http://givecamp.org/" target="_blank">GiveCamp</a>. For those who don&rsquo;t know, GiveCamp is a event where developers and designers come together to donate their efforts to charity and non-profit organizations. Wanting to help the community and being located so close, we thought this was the perfect opportunity to share our skills.</p>
+
+<p>The <a title="GiveCamp Birmingham" href="http://givecampbirmingham.org/" target="_blank">Birmingham GiveCamp</a> was organized by <a title="Leverett Powell on Twitter" href="https://twitter.com/#!/LeverettPowell" target="_blank">Leverett Powell</a>, and three charities participated. <a title="Spirit of Hope Youth Ranch" href="http://sohyr.org" target="_blank">Spirit of Hope Youth Ranch</a> brings children with abused pasts together with abused horses. <a title="My Father's House on Manta" href="http://www.manta.com/c/mml1r6r/my-father-s-house-foundation-inc" target="_blank">My Father&rsquo;s House</a> takes in children who have outgrown foster care. Lastly, <a title="Innovation Depot" href="http://www.innovationdepot.net/" target="_blank">Innovation Depot</a> a non-profit business incubator.</p>
+
+<p>Originally we had planned to form a team with a <a title="Bryan Price" href="http://bryanprice.info" target="_blank">couple</a> of <a title="Joshua Rogers" href="http://joshuarogers.net" target="_blank">coworkers</a> so that we could jam together. However, because of inclement weather the previous week, developer turnout was low and we had to split up. The charity we ended up working with was Spirit of Hope Youth Ranch.</p>
+
+<p>The first night was used for team introductions and requirements gathering. Our team was rounded out by <a title="John Tolar on Twitter" href="https://twitter.com/#!/jtolar/" target="_blank">John Tolar</a> who acted as Interim PM for the first night, <a title="Litepack on Google Profiles" href="http://www.google.com/profiles/litepack" target="_blank">Brant Powell</a> as lead designer, and <a title="Rebecca Lynn Morrow" href="http://rebeccalynnmorrow.com/" target="_blank">Rebecca Morrow</a> as SEO Guru.</p>
+
+<p>SOHYR was represented by Joy O&#8217;Neal. She did a great job expressing what she was looking for in the new website. We spent a good deal of time discussing the site map and social integration. Joy was very well prepared with images, videos and logos to use in the design.</p>
+
+<p>John Tolar turned us on to <a title="Sitefinity" href="http://www.sitefinity.com/" target="_blank">Sitefinity</a>, a product that was generously donated by <a title="Telerik" href="http://telerik.com" target="_blank">Telerik</a> for all GiveCamp charities to use in their projects. Version 4.0 had just been released and John had experience building on previous versions of the platform. It showed strong layout and widgeting capabilities.</p>
+
+<p>To round the social experience of the website, a list of missing widgets was compiled for development during the rest of the weekend. It was decided that David and I would focus on implementing these widgets. Brant would be in charge of the site layout and CSS while John would be responsible for applying that design to a Sitefinity instance. John would also contribute to the social widgets as time allowed. Rebecca would help Joy with rewording pages for SEO.</p>
+
+<p>Everyone retired enthusiastically anticipating the work to come.</p>
+
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/02/02/givecamp-day-1/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/01/28/the-story-of-asfac/">The Story of asfac</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/04/09/from-javascriptserializer-to-jsonnet/">From JavaScriptSerializer to JSON.Net</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/03/making-a-code-library/">Making a Code Library</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/01/27/consolas-for-github/">Consolas for github</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/01/04/vibrantink-theme-for-flashdevelop/">VibrantInk Theme for FlashDevelop</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/joerobich">@joerobich</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'joerobich',
+            count: 4,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Joey Robichaud -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> | Themed with <a href="https://github.com/lucaslew/whitespace">Whitespace</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'joeyrobichaud';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
