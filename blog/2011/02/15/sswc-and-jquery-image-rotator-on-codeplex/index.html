@@ -9,7 +9,7 @@
   <meta name="author" content="Joey Robichaud">
 
   
-  <meta name="description" content="This post originally appeared on The DevStop and has been migrated here via a quick and dirty script. Please forgive any encoding issues. Knowing &hellip;">
+  <meta name="description" content="Knowing that we had made a commitment and wanting our efforts to be utilized, we put in some extra hours to get an inital release together. John &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,20 +91,17 @@
   </header>
 
 
-<div class="entry-content"><!-- more -->
+<div class="entry-content"><p>Knowing that we had made a commitment and wanting our efforts to be utilized, we put in some extra hours to get an inital release together. <a title="John Tolar on Twitter" href="http://twitter.com/jtolar" target="_blank">John Tolar</a> emailed us his Social Share Bar widget and some screenshots for inclusion in the project. However, there were a few issues we felt must be resolved before we could release the widgets to the world.</p>
 
-
-<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/02/15/sswc-and-jquery-image-rotator-on-codeplex/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
-
-<p>Knowing that we had made a commitment and wanting our efforts to be utilized, we put in some extra hours to get an inital release together. <a title="John Tolar on Twitter" href="http://twitter.com/jtolar" target="_blank">John Tolar</a> emailed us his Social Share Bar widget and some screenshots for inclusion in the project. However, there were a few issues we felt must be resolved before we could release the widgets to the world.</p>
-
-<p>First, the <a title="jQuery Plugins on Sitefinity Forums" href="http://www.sitefinity.com/devnet/forums/sitefinity-4-x/general-discussions/jquery-plugins-and-or-authoring-custom-jquery-functions-not-supported.aspx" target="_blank">jQuery plugin issue</a> we found on <a title="GiveCamp Day 3" href="http://thedevstop.wordpress.com/2011/02/02/givecamp-day-3/" target="_blank">Day 3</a> of <a title="GiveCamp" href="http://givecamp.org" target="_blank">GiveCamp</a>.Â It took a good bit of trial and error, but David came up with something a little less disgusting than what we had. RegisterScriptInclude had consistently loaded the script references too early in the page, and they were subject the Sitefinity issue linked above. Using the ClientScriptManager&rsquo;s RegisterStartupScript, however, pushed the script reference to the bottom of page and avoided the redefinition of jQuery. With our scripts now being included once a piece in a fairly sensible location, we closed this issue.</p>
+<p>First, the <a title="jQuery Plugins on Sitefinity Forums" href="http://www.sitefinity.com/devnet/forums/sitefinity-4-x/general-discussions/jquery-plugins-and-or-authoring-custom-jquery-functions-not-supported.aspx" target="_blank">jQuery plugin issue</a> we found on <a title="GiveCamp Day 3" href="http://thedevstop.wordpress.com/2011/02/02/givecamp-day-3/" target="_blank">Day 3</a> of <a title="GiveCamp" href="http://givecamp.org" target="_blank">GiveCamp</a>. It took a good bit of trial and error, but David came up with something a little less disgusting than what we had. RegisterScriptInclude had consistently loaded the script references too early in the page, and they were subject the Sitefinity issue linked above. Using the ClientScriptManager&rsquo;s RegisterStartupScript, however, pushed the script reference to the bottom of page and avoided the redefinition of jQuery. With our scripts now being included once a piece in a fairly sensible location, we closed this issue.</p>
 
 <p>The other two issues were fairly trivial. First, we ensured that the generated HTML elements got unique ids. We had been generating facebookImageRotator, flickrImageRotator, etc., but if you threw two Facebook rotators on the page you&rsquo;d get a duplicate. We used the user ids, album names, etc. to make it a bit more unique. The last issue was having our widgets include <a title="prettyPhoto" href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/" target="_blank">prettyPhoto</a> automatically instead of relying on documentation to guide the user.</p>
 
 <p>We polished up the documentation for Sitefinity developers interested in using the controls in their sites as well as those wanting to contribute to the project. David also started a separate CodePlex for hosting the fully independant <a title="jQuery Image Rotator on CodePlex" href="http://jqueryimagerotator.codeplex.com" target="_blank">jQuery rotator plugin</a>.</p>
 
 <p>Feel free to download the controls and please provide some feedback.</p>
+
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/02/15/sswc-and-jquery-image-rotator-on-codeplex/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
 </div>
 
 
