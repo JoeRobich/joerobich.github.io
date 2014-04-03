@@ -9,7 +9,7 @@
   <meta name="author" content="Joey Robichaud">
 
   
-  <meta name="description" content="This post originally appeared on The DevStop and has been migrated here via a quick and dirty script. Please forgive any encoding issues. I was &hellip;">
+  <meta name="description" content="I was reading my twitter feed the other day and saw this exchange come through&hellip; and I couldn&rsquo;t agree more. So I decided to do something &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,82 +91,65 @@
   </header>
 
 
-<div class="entry-content"><!-- more -->
+<div class="entry-content"><p>I was reading my twitter feed the other day and saw this exchange come through&hellip;</p>
+
+<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/why-not-consolas.png"><img title="Why not Consolas?" src="http://thedevstop.files.wordpress.com/2012/01/why-not-consolas.png" alt="Why not Consolas?" width="556" height="357" /></a></p>
 
 
-<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2012/01/27/consolas-for-github/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
-
-<p>I was reading my twitter feed the other day and saw this exchange come through&hellip;</p>
-
-<p><a href="http://thedevstop.files.wordpress.com/2012/01/why-not-consolas.png"><img class="size-full wp-image-529 aligncenter" title="Why not Consolas?" src="http://thedevstop.files.wordpress.com/2012/01/why-not-consolas.png" alt="Why not Consolas?" width="556" height="357" /></a></p>
-
-<p>and I couldn&rsquo;t agree more.Â So I decided to do something about it!</p>
+<p>and I couldn&rsquo;t agree more. So I decided to do something about it!</p>
 
 <h2>Getting to know Greasemonkey</h2>
 
+<p>I remember hearing about Greasemonkey scripts back in Firefox&rsquo;s heyday. According to Wikipedia, <a href="http://en.wikipedia.org/wiki/Greasemonkey">Greasemonkey</a> &ldquo;&hellip; allows users to install scripts that make on-the-fly changes to HTML web page content &hellip;&rdquo; Even better than that, Google Chrome treats the scripts as extensions <a href="http://www.chromium.org/developers/design-documents/user-scripts">right out of the box</a>.</p>
 
-<p>I remember hearing about Greasemonkey scripts back in Firefox&rsquo;s heyday. According to Wikipedia, <a href="http://en.wikipedia.org/wiki/Greasemonkey">Greasemonkey</a> &ldquo;&hellip;Â allows users to installÂ scriptsÂ that makeÂ on-the-flyÂ changes toÂ HTMLÂ web pageÂ content &hellip;&rdquo; Even better than that, Google Chrome treats the scripts as extensions <a href="http://www.chromium.org/developers/design-documents/user-scripts">right out of the box</a>.</p>
-
-<p>Of course, I have never written a Greasemonkey script so, I went to the worlds repository of these scripts,Â <a href="http://userscripts.org/">Userscripts.org</a>. Right off the bat, Userscripts made it super easy to get my bearings; they allow you to view the source of existing scripts right in the browser.</p>
+<p>Of course, I have never written a Greasemonkey script so, I went to the worlds repository of these scripts, <a href="http://userscripts.org/">Userscripts.org</a>. Right off the bat, Userscripts made it super easy to get my bearings; they allow you to view the source of existing scripts right in the browser.</p>
 
 <p><a href="http://thedevstop.files.wordpress.com/2012/01/userscripts-source-code1.png"><img class="size-full wp-image-531 aligncenter" title="Userscripts view source code" src="http://thedevstop.files.wordpress.com/2012/01/userscripts-source-code1.png" alt="Userscripts view source code" width="556" height="427" /></a></p>
 
 <p>My next stop is over at github to figure out what CSS I need to replace.</p>
 
-<h2>Github&#8217;s CSS</h2>
-
+<h2>Github&rsquo;s CSS</h2>
 
 <p>Alright, time to use those F12 tools! I browsed over to the <a href="https://github.com/mono/monodevelop">MonoDevelop</a> project on github and inspected the element that contained source code.</p>
 
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/pre-font-family-css.png"><img class="alignnone size-full wp-image-532" title="Source code font family css" src="http://thedevstop.files.wordpress.com/2012/01/pre-font-family-css.png" alt="Source code font family css" width="581" height="513" /></a></p>
+<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/pre-font-family-css.png"><img title="Source code font family css" src="http://thedevstop.files.wordpress.com/2012/01/pre-font-family-css.png" alt="Source code font family css" width="581" height="513" /></a></p>
 
 
-<p style="text-align:left;">Great! Now I know the CSS selectors that I need to override. With this knowledge in hand I started my first user script.</p>
+<p>Great! Now I know the CSS selectors that I need to override. With this knowledge in hand I started my first user script.</p>
 
+<p>First, I borrowed a bit of code for injecting a new style elements into the page head. I then copied the CSS for github&rsquo;s pre element over to my script and added Consolas to the beginning of the font family definition. Just like that, I had the first version of my script.</p>
 
-<p style="text-align:left;">First, I borrowed a bit of code for injecting a new style elements into the page head. I then copied the CSS for github&#8217;s pre element over to my script and added Consolas to the beginning of the font family definition. Just like that, I had the first version of my script.</p>
+<h2>Bringing it together</h2>
 
+<p>I created an account on Userscripts.org and navigated to script management. Uploading was as simple as pointing to my script file and filling out some metadata about the script. Time to see it in action!</p>
 
-
-
-<h2 style="text-align:left;">Bringing it together</h2>
-
-
-<p style="text-align:left;">I created an account on Userscripts.org and navigated to script management. Uploading was as simple as pointing to my script file and filling out some metadata about the script. Time to see it in action!</p>
-
-
-
-
-<h2 style="text-align:left;">The finish line!</h2>
-
+<h2>The finish line!</h2>
 
 <p>I went to the <a href="http://userscripts.org/scripts/show/123936">Consolas for github</a> script page with Chrome and clicked the install button.</p>
 
-<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/userscripts-install.png"><img class="alignnone size-full wp-image-533" title="Userscripts install" src="http://thedevstop.files.wordpress.com/2012/01/userscripts-install.png" alt="Userscripts install" width="581" height="292" /></a></p>
+<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/userscripts-install.png"><img title="Userscripts install" src="http://thedevstop.files.wordpress.com/2012/01/userscripts-install.png" alt="Userscripts install" width="581" height="292" /></a></p>
 
 
-<p style="text-align:left;">Followed the prompts..</p>
+<p>Followed the prompts..</p>
+
+<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/userscripts-continue.png"><img title="Continue installation" src="http://thedevstop.files.wordpress.com/2012/01/userscripts-continue.png" alt="Continue installation" width="494" height="43" /></a></p>
 
 
-<p style="text-align:left;"><a href="http://thedevstop.files.wordpress.com/2012/01/userscripts-continue.png"><img class="size-full wp-image-534" title="Continue installation" src="http://thedevstop.files.wordpress.com/2012/01/userscripts-continue.png" alt="Continue installation" width="494" height="43" /></a></p>
-
-
-<p style="text-align:left;"><a href="http://thedevstop.files.wordpress.com/2012/01/userscripts-add.png"><img class="size-full wp-image-535" title="Add script as extension" src="http://thedevstop.files.wordpress.com/2012/01/userscripts-add.png" alt="Add script as extension" width="425" height="225" /></a></p>
+<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/userscripts-add.png"><img title="Add script as extension" src="http://thedevstop.files.wordpress.com/2012/01/userscripts-add.png" alt="Add script as extension" width="425" height="225" /></a></p>
 
 
 <p>.. and Success!</p>
 
-<p style="text-align:left;"><a href="http://thedevstop.files.wordpress.com/2012/01/before-and-after.png"><img class="size-full wp-image-536 aligncenter" title="Code before and after" src="http://thedevstop.files.wordpress.com/2012/01/before-and-after.png" alt="Code before and after" width="638" height="487" /></a></p>
+<p style="text-align:center;"><a href="http://thedevstop.files.wordpress.com/2012/01/before-and-after.png"><img title="Code before and after" src="http://thedevstop.files.wordpress.com/2012/01/before-and-after.png" alt="Code before and after" width="638" height="487" /></a></p>
 
 
-<p style="text-align:left;">After some twiddling, I get the in-browser editor using Consolas as well.</p>
+<p>After some twiddling, I get the in-browser editor using Consolas as well.</p>
 
+<p>Install it. Enjoy it. Remix it. Please just don&rsquo;t make Comic Sans for github.</p>
 
-<p style="text-align:left;">Install it. Enjoy it. Remix it. Please justÂ don&#8217;t make Comic Sans for github.</p>
+<p><a href="http://userscripts.org/scripts/show/123936">Consolas for github on Userscripts.org</a></p>
 
-
-<p style="text-align:left;"><a href="http://userscripts.org/scripts/show/123936">Consolas for github on Userscripts.org</a></p>
-
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2012/01/27/consolas-for-github/">The DevStop</a> and has been migrated here via a quick and dirty script. Please forgive any encoding issues.</em></p>
 </div>
 
 
