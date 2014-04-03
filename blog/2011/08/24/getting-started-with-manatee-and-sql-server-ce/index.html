@@ -195,18 +195,18 @@
 <span class='line-number'>41</span>
 </pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">private</span> <span class="k">void</span> <span class="nf">SetupConnectionAndFactory</span><span class="p">(</span><span class="kt">string</span> <span class="n">connectionStringName</span><span class="p">)</span>
 </span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">connectionStringName</span> <span class="p">==</span> <span class="p">&amp;</span><span class="n">quot</span><span class="p">;&amp;</span><span class="n">quot</span><span class="p">;)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">connectionStringName</span> <span class="p">==</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">{</span>
 </span><span class='line'>        <span class="n">connectionStringName</span> <span class="p">=</span> <span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">ConnectionStrings</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">Name</span><span class="p">;</span>
 </span><span class='line'>    <span class="p">}</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">ConnectionStrings</span><span class="p">[</span><span class="n">connectionStringName</span><span class="p">]</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="k">throw</span> <span class="k">new</span> <span class="nf">InvalidOperationException</span><span class="p">(&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">Can</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">find</span> <span class="n">a</span> <span class="n">connection</span> <span class="kt">string</span> <span class="n">with</span> <span class="n">the</span> <span class="n">name</span> <span class="err">&#39;</span><span class="p">&amp;</span><span class="n">quot</span><span class="p">;</span> <span class="p">+</span>
-</span><span class='line'>                                            <span class="n">connectionStringName</span> <span class="p">+</span> <span class="p">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="err">&#39;</span><span class="p">&amp;</span><span class="n">quot</span><span class="p">;);</span>
+</span><span class='line'>        <span class="k">throw</span> <span class="k">new</span> <span class="nf">InvalidOperationException</span><span class="p">(</span><span class="s">&quot;Can&#39;t find a connection string with the name &#39;&quot;</span> <span class="p">+</span>
+</span><span class='line'>                                            <span class="n">connectionStringName</span> <span class="p">+</span> <span class="s">&quot;&#39;&quot;</span><span class="p">);</span>
 </span><span class='line'>    <span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="kt">var</span> <span class="n">providerName</span> <span class="p">=</span> <span class="p">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">System</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">SqlClient</span><span class="p">&amp;</span><span class="n">quot</span><span class="p">;;</span>
+</span><span class='line'>    <span class="kt">var</span> <span class="n">providerName</span> <span class="p">=</span> <span class="s">&quot;System.Data.SqlClient&quot;</span><span class="p">;</span>
 </span><span class='line'>    <span class="kt">var</span> <span class="n">connectionStringsSettings</span> <span class="p">=</span> <span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">ConnectionStrings</span><span class="p">[</span><span class="n">connectionStringName</span><span class="p">];</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">if</span> <span class="p">(!</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">connectionStringsSettings</span><span class="p">.</span><span class="n">ProviderName</span><span class="p">))</span>
@@ -217,7 +217,7 @@
 </span><span class='line'>    <span class="n">_factory</span> <span class="p">=</span> <span class="n">DbProviderFactories</span><span class="p">.</span><span class="n">GetFactory</span><span class="p">(</span><span class="n">providerName</span><span class="p">);</span>
 </span><span class='line'>    <span class="n">_connectionString</span> <span class="p">=</span> <span class="n">connectionStringsSettings</span><span class="p">.</span><span class="n">ConnectionString</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">providerName</span> <span class="p">==</span> <span class="p">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">System</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">SqlServerCe</span><span class="p">.</span><span class="m">4.0</span><span class="p">&amp;</span><span class="n">quot</span><span class="p">;)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">providerName</span> <span class="p">==</span> <span class="s">&quot;System.Data.SqlServerCe.4.0&quot;</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">{</span>
 </span><span class='line'>        <span class="n">InitializeDatabase</span><span class="p">();</span>
 </span><span class='line'>    <span class="p">}</span>
@@ -257,9 +257,9 @@
 </span><span class='line'><span class="p">{</span>
 </span><span class='line'>    <span class="kt">string</span> <span class="n">toColumn</span> <span class="p">=</span> <span class="n">op</span><span class="p">.</span><span class="n">foreign_key</span><span class="p">.</span><span class="n">to_column</span> <span class="p">??</span> <span class="n">op</span><span class="p">.</span><span class="n">foreign_key</span><span class="p">.</span><span class="n">from_column</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="kt">var</span> <span class="n">sql</span> <span class="p">=</span> <span class="err">@</span><span class="p">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">ALTER</span> <span class="n">TABLE</span> <span class="p">{</span><span class="m">1</span><span class="p">}</span>  <span class="n">ADD</span>
-</span><span class='line'><span class="n">CONSTRAINT</span> <span class="p">[</span><span class="n">FK_</span><span class="p">{</span><span class="m">1</span><span class="p">}</span><span class="n">_</span><span class="p">{</span><span class="m">0</span><span class="p">}]</span> <span class="n">FOREIGN</span> <span class="n">KEY</span> <span class="p">([{</span><span class="m">3</span><span class="p">}])</span>
-</span><span class='line'><span class="n">REFERENCES</span> <span class="p">{</span><span class="m">0</span><span class="p">}</span> <span class="p">([{</span><span class="m">2</span><span class="p">}]);&amp;</span><span class="n">quot</span><span class="p">;;</span>
+</span><span class='line'>    <span class="kt">var</span> <span class="n">sql</span> <span class="p">=</span> <span class="s">@&quot;ALTER TABLE {1}  ADD  </span>
+</span><span class='line'><span class="s">CONSTRAINT [FK_{1}_{0}] FOREIGN KEY ([{3}])</span>
+</span><span class='line'><span class="s">REFERENCES {0} ([{2}]);&quot;</span><span class="p">;</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="n">sb</span><span class="p">.</span><span class="n">AppendFormat</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">op</span><span class="p">.</span><span class="n">foreign_key</span><span class="p">.</span><span class="n">from_table</span><span class="p">,</span>
 </span><span class='line'>        <span class="n">op</span><span class="p">.</span><span class="n">foreign_key</span><span class="p">.</span><span class="n">to_table</span><span class="p">,</span> <span class="n">op</span><span class="p">.</span><span class="n">foreign_key</span><span class="p">.</span><span class="n">from_column</span><span class="p">,</span> <span class="n">toColumn</span><span class="p">);</span>
@@ -286,7 +286,7 @@
 </span><span class='line'>    <span class="c1">//this is the current directory</span>
 </span><span class='line'>    <span class="kt">var</span> <span class="n">currentDirectory</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DirectoryInfo</span><span class="p">(</span><span class="n">Directory</span><span class="p">.</span><span class="n">GetCurrentDirectory</span><span class="p">());</span>
 </span><span class='line'>    <span class="c1">//return the Migrations directory</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">currentDirectory</span><span class="p">.</span><span class="n">FullName</span><span class="p">,</span> <span class="p">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">Migrations</span><span class="p">&amp;</span><span class="n">quot</span><span class="p">;);</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">currentDirectory</span><span class="p">.</span><span class="n">FullName</span><span class="p">,</span> <span class="s">&quot;Migrations&quot;</span><span class="p">);</span>
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
