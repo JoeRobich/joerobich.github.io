@@ -193,7 +193,7 @@
 <span class='line-number'>39</span>
 <span class='line-number'>40</span>
 <span class='line-number'>41</span>
-</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">private</span> <span class="k">void</span> <span class="nf">SetupConnectionAndFactory</span><span class="p">(</span><span class="kt">string</span> <span class="n">connectionStringName</span><span class="p">)</span>
+</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">private</span> <span class="k">void</span> <span class="nf">SetupConnectionAndFactory</span><span class="kt">string</span> <span class="n">connectionStringName</span><span class="p">)</span>
 </span><span class='line'><span class="p">{</span>
 </span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">connectionStringName</span> <span class="p">==</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">{</span>
@@ -202,7 +202,7 @@
 </span><span class='line'>
 </span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">ConnectionStrings</span><span class="p">[</span><span class="n">connectionStringName</span><span class="p">]</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="k">throw</span> <span class="k">new</span> <span class="nf">InvalidOperationException</span><span class="p">(</span><span class="s">&quot;Can&#39;t find a connection string with the name &#39;&quot;</span> <span class="p">+</span>
+</span><span class='line'>        <span class="k">throw</span> <span class="k">new</span> <span class="nf">InvalidOperationException</span><span class="s">&quot;Can&#39;t find a connection string with the name &#39;&quot;</span> <span class="p">+</span>
 </span><span class='line'>                                            <span class="n">connectionStringName</span> <span class="p">+</span> <span class="s">&quot;&#39;&quot;</span><span class="p">);</span>
 </span><span class='line'>    <span class="p">}</span>
 </span><span class='line'>
@@ -223,7 +223,7 @@
 </span><span class='line'>    <span class="p">}</span>
 </span><span class='line'><span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'><span class="k">private</span> <span class="k">void</span> <span class="nf">InitializeDatabase</span><span class="p">()</span>
+</span><span class='line'><span class="k">private</span> <span class="k">void</span> <span class="nf">InitializeDatabase</span><span class="p">)</span>
 </span><span class='line'><span class="p">{</span>
 </span><span class='line'>    <span class="nc">var</span> <span class="nv">engine</span> <span class="p">=</span> <span class="k">new</span> <span class="nc">System.Data.SqlServerCe.SqlCeEngine</span><span class="p">(</span><span class="n">_connectionString</span><span class="p">);</span>
 </span><span class='line'>
@@ -281,7 +281,7 @@
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">static</span> <span class="kt">string</span> <span class="nf">LocateMigrations</span><span class="p">()</span>
+</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">static</span> <span class="kt">string</span> <span class="nf">LocateMigrations</span><span class="p">)</span>
 </span><span class='line'><span class="p">{</span>
 </span><span class='line'>    <span class="c1">//this is the current directory</span>
 </span><span class='line'>    <span class="nc">var</span> <span class="nv">currentDirectory</span> <span class="p">=</span> <span class="k">new</span> <span class="nc">DirectoryInfo</span><span class="p">(</span><span class="n">Directory</span><span class="p">.</span><span class="n">GetCurrentDirectory</span><span class="p">());</span>
