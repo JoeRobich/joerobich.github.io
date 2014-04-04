@@ -206,8 +206,8 @@
 </span><span class='line'>                                            <span class="n">connectionStringName</span> <span class="p">+</span> <span class="s">&quot;&#39;&quot;</span><span class="p">);</span>
 </span><span class='line'>    <span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="kt">var</span> <span class="n">providerName</span> <span class="p">=</span> <span class="s">&quot;System.Data.SqlClient&quot;</span><span class="p">;</span>
-</span><span class='line'>    <span class="kt">var</span> <span class="n">connectionStringsSettings</span> <span class="p">=</span> <span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">ConnectionStrings</span><span class="p">[</span><span class="n">connectionStringName</span><span class="p">];</span>
+</span><span class='line'>    <span class="nc">var</span> <span class="nv">providerName</span> <span class="p">=</span> <span class="s">&quot;System.Data.SqlClient&quot;</span><span class="p">;</span>
+</span><span class='line'>    <span class="nc">var</span> <span class="nv">connectionStringsSettings</span> <span class="p">=</span> <span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">ConnectionStrings</span><span class="p">[</span><span class="n">connectionStringName</span><span class="p">];</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">if</span> <span class="p">(!</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">connectionStringsSettings</span><span class="p">.</span><span class="n">ProviderName</span><span class="p">))</span>
 </span><span class='line'>    <span class="p">{</span>
@@ -225,7 +225,7 @@
 </span><span class='line'>
 </span><span class='line'><span class="k">private</span> <span class="k">void</span> <span class="nf">InitializeDatabase</span><span class="p">()</span>
 </span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="kt">var</span> <span class="n">engine</span> <span class="p">=</span> <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">SqlServerCe</span><span class="p">.</span><span class="n">SqlCeEngine</span><span class="p">(</span><span class="n">_connectionString</span><span class="p">);</span>
+</span><span class='line'>    <span class="nc">var</span> <span class="nv">engine</span> <span class="p">=</span> <span class="k">new</span> <span class="nc">System.Data.SqlServerCe.SqlCeEngine</span><span class="p">(</span><span class="n">_connectionString</span><span class="p">);</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">if</span> <span class="p">(!</span><span class="n">engine</span><span class="p">.</span><span class="n">Verify</span><span class="p">())</span>
 </span><span class='line'>    <span class="p">{</span>
@@ -255,9 +255,9 @@
 </pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="p">...</span>
 </span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="n">op</span><span class="p">.</span><span class="n">foreign_key</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
 </span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="kt">string</span> <span class="n">toColumn</span> <span class="p">=</span> <span class="n">op</span><span class="p">.</span><span class="n">foreign_key</span><span class="p">.</span><span class="n">to_column</span> <span class="p">??</span> <span class="n">op</span><span class="p">.</span><span class="n">foreign_key</span><span class="p">.</span><span class="n">from_column</span><span class="p">;</span>
+</span><span class='line'>    <span class="kt">string</span> <span class="nv">toColumn</span> <span class="p">=</span> <span class="n">op</span><span class="p">.</span><span class="n">foreign_key</span><span class="p">.</span><span class="n">to_column</span> <span class="p">??</span> <span class="n">op</span><span class="p">.</span><span class="n">foreign_key</span><span class="p">.</span><span class="n">from_column</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="kt">var</span> <span class="n">sql</span> <span class="p">=</span> <span class="s">@&quot;ALTER TABLE {1}  ADD  </span>
+</span><span class='line'>    <span class="nc">var</span> <span class="nv">sql</span> <span class="p">=</span> <span class="s">@&quot;ALTER TABLE {1}  ADD  </span>
 </span><span class='line'><span class="s">CONSTRAINT [FK_{1}_{0}] FOREIGN KEY ([{3}])</span>
 </span><span class='line'><span class="s">REFERENCES {0} ([{2}]);&quot;</span><span class="p">;</span>
 </span><span class='line'>
@@ -284,7 +284,7 @@
 </pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">static</span> <span class="kt">string</span> <span class="nf">LocateMigrations</span><span class="p">()</span>
 </span><span class='line'><span class="p">{</span>
 </span><span class='line'>    <span class="c1">//this is the current directory</span>
-</span><span class='line'>    <span class="kt">var</span> <span class="n">currentDirectory</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DirectoryInfo</span><span class="p">(</span><span class="n">Directory</span><span class="p">.</span><span class="n">GetCurrentDirectory</span><span class="p">());</span>
+</span><span class='line'>    <span class="nc">var</span> <span class="nv">currentDirectory</span> <span class="p">=</span> <span class="k">new</span> <span class="nc">DirectoryInfo</span><span class="p">(</span><span class="n">Directory</span><span class="p">.</span><span class="n">GetCurrentDirectory</span><span class="p">());</span>
 </span><span class='line'>    <span class="c1">//return the Migrations directory</span>
 </span><span class='line'>    <span class="k">return</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">currentDirectory</span><span class="p">.</span><span class="n">FullName</span><span class="p">,</span> <span class="s">&quot;Migrations&quot;</span><span class="p">);</span>
 </span><span class='line'><span class="p">}</span>
