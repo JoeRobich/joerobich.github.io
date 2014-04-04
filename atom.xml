@@ -4,7 +4,7 @@
   <title><![CDATA[Joey Robichaud]]></title>
   <link href="http://www.joeyrobichaud.com/atom.xml" rel="self"/>
   <link href="http://www.joeyrobichaud.com/"/>
-  <updated>2014-04-03T22:51:40-04:00</updated>
+  <updated>2014-04-03T22:57:05-04:00</updated>
   <id>http://www.joeyrobichaud.com/</id>
   <author>
     <name><![CDATA[Joey Robichaud]]></name>
@@ -342,7 +342,7 @@
 </span><span class='line'>
 </span><span class='line'>    <span class="k">private</span> <span class="kt">object</span> <span class="nf">ReadObject</span><span class="p">(</span><span class="nc">JsonReader</span> <span class="nv">reader</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="nc">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span>&gt;<span class="nv"> </span>dictionary<span class="p"> </span> <span class="k">new</span> <span class="nc">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;();</span>
+</span><span class='line'>        <span class="nc">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="nv">dictionary</span> <span class="p">=</span> <span class="k">new</span> <span class="nc">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;();</span>
 </span><span class='line'>
 </span><span class='line'>        <span class="k">while</span> <span class="p">(</span><span class="n">reader</span><span class="p">.</span><span class="n">Read</span><span class="p">())</span>
 </span><span class='line'>        <span class="p">{</span>
@@ -370,7 +370,7 @@
 </span><span class='line'>
 </span><span class='line'>    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">WriteJson</span><span class="p">(</span><span class="nc">JsonWriter</span> <span class="nv">writer</span><span class="p">,</span> <span class="kt">object</span> <span class="n">value</span><span class="p">,</span> <span class="nc">JsonSerializer</span> <span class="nv">serializer</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="nc">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span>&gt;<span class="nv"> </span>dictionary<span class="p"> </span> <span class="n">_converter</span><span class="p">.</span><span class="n">Serialize</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">_serializer</span><span class="p">);</span>
+</span><span class='line'>        <span class="nc">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="nv">dictionary</span> <span class="p">=</span> <span class="n">_converter</span><span class="p">.</span><span class="n">Serialize</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">_serializer</span><span class="p">);</span>
 </span><span class='line'>        <span class="n">serializer</span><span class="p">.</span><span class="n">Serialize</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">);</span>
 </span><span class='line'>    <span class="p">}</span>
 </span><span class='line'><span class="p">}</span>
