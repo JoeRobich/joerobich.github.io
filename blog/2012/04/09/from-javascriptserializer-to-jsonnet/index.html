@@ -109,7 +109,7 @@
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">public</span> <span class="k">interface</span> <span class="nc">IJsonSerializer</span>
+</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">public</span> <span class="k">interface</span> <span class="mi">IJsonSerializer</span>
 </span><span class='line'><span class="p">{</span>
 </span><span class='line'>    <span class="k">void</span> <span class="nf">RegisterConverters</span><span class="p">(</span><span class="nc">IEnumerable</span><span class="p">&lt;</span><span class="nc">IJsonConverter</span><span class="p">&gt;</span> <span class="nv">converters</span><span class="p">);</span>
 </span><span class='line'>    <span class="n">T</span> <span class="nf">ConvertToType</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;(</span><span class="nc">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="nv">dictionary</span><span class="p">);</span>
@@ -128,7 +128,7 @@
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">public</span> <span class="k">interface</span> <span class="nc">IJsonConverter</span>
+</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">public</span> <span class="k">interface</span> <span class="mi">IJsonConverter</span>
 </span><span class='line'><span class="p">{</span>
 </span><span class='line'>    <span class="kt">object</span> <span class="nf">Deserialize</span><span class="p">(</span><span class="nc">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="nv">dictionary</span><span class="p">,</span> <span class="nc">Type</span> <span class="nv">type</span><span class="p">,</span> <span class="nc">IJsonSerializer</span> <span class="nv">serializer</span><span class="p">);</span>
 </span><span class='line'>    <span class="n">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="n">Serialize</span><span class="p">(</span><span class="kt">object</span> <span class="n">obj</span><span class="p">,</span> <span class="nc">IJsonSerializer</span> <span class="nv">serializer</span><span class="p">);</span>
