@@ -4,7 +4,7 @@
   <title><![CDATA[Joey Robichaud]]></title>
   <link href="http://www.joeyrobichaud.com/atom.xml" rel="self"/>
   <link href="http://www.joeyrobichaud.com/"/>
-  <updated>2014-04-07T08:26:07-04:00</updated>
+  <updated>2014-04-07T08:52:38-04:00</updated>
   <id>http://www.joeyrobichaud.com/</id>
   <author>
     <name><![CDATA[Joey Robichaud]]></name>
@@ -272,7 +272,7 @@
 </span><span class='line'>        <span class="k">if</span> <span class="p">(!(</span><span class="n">value</span> <span class="k">is</span> <span class="mi">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;))</span>
 </span><span class='line'>            <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="p">(</span><span class="s">&quot;Expected dictionary but found a list&quot;</span><span class="p">);</span>
 </span><span class='line'>
-</span><span class='line'>        <span class="n">value</span> <span class="p">=</span> <span class="n">_converter</span><span class="p">.</span><span class="n">Deserialize</span><span class="p">((</span><span class="nv">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;)</span><span class="n">value</span><span class="p">,</span> <span class="n">objectType</span><span class="p">,</span> <span class="n">_serializer</span><span class="p">);</span>
+</span><span class='line'>        <span class="n">value</span> <span class="p">=</span> <span class="n">_converter</span><span class="p">.</span><span class="n">Deserialize</span><span class="p">((</span><span class="mi">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;)</span><span class="n">value</span><span class="p">,</span> <span class="n">objectType</span><span class="p">,</span> <span class="n">_serializer</span><span class="p">);</span>
 </span><span class='line'>
 </span><span class='line'>        <span class="k">return</span> <span class="n">value</span><span class="p">;</span>
 </span><span class='line'>    <span class="p">}</span>
