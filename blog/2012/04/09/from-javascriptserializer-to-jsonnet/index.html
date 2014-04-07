@@ -111,8 +111,8 @@
 <span class='line-number'>8</span>
 </pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">public</span> <span class="k">interface</span> <span class="mi">IJsonSerializer</span>
 </span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="k">void</span> <span class="nf">RegisterConverters</span><span class="p">(</span><span class="nc">IEnumerable</span><span class="p">&lt;</span><span class="nc">IJsonConverter</span><span class="p">&gt;</span> <span class="nv">converters</span><span class="p">);</span>
-</span><span class='line'>    <span class="n">T</span> <span class="nf">ConvertToType</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;(</span><span class="nc">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="nv">dictionary</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">void</span> <span class="nf">RegisterConverters</span><span class="p">(</span><span class="mi">IEnumerable</span><span class="p">&lt;</span><span class="mi">IJsonConverter</span><span class="p">&gt;</span> <span class="nv">converters</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">T</span> <span class="nf">ConvertToType</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;(</span><span class="mi">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="nv">dictionary</span><span class="p">);</span>
 </span><span class='line'>    <span class="n">T</span> <span class="nf">Deserialize</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;(</span><span class="kt">string</span> <span class="n">input</span><span class="p">);</span>
 </span><span class='line'>    <span class="kt">string</span> <span class="nf">Serialize</span><span class="p">(</span><span class="kt">object</span> <span class="n">obj</span><span class="p">);</span>
 </span><span class='line'>    <span class="kt">string</span> <span class="nf">DefaultSerialize</span><span class="p">(</span><span class="kt">object</span> <span class="n">obj</span><span class="p">);</span>
@@ -130,9 +130,9 @@
 <span class='line-number'>6</span>
 </pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">public</span> <span class="k">interface</span> <span class="mi">IJsonConverter</span>
 </span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="kt">object</span> <span class="nf">Deserialize</span><span class="p">(</span><span class="nc">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="nv">dictionary</span><span class="p">,</span> <span class="nc">Type</span> <span class="nv">type</span><span class="p">,</span> <span class="nc">IJsonSerializer</span> <span class="nv">serializer</span><span class="p">);</span>
-</span><span class='line'>    <span class="n">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="n">Serialize</span><span class="p">(</span><span class="kt">object</span> <span class="n">obj</span><span class="p">,</span> <span class="nc">IJsonSerializer</span> <span class="nv">serializer</span><span class="p">);</span>
-</span><span class='line'>    <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="nc">Type</span><span class="p">&gt;</span> <span class="n">SupportedTypes</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>    <span class="kt">object</span> <span class="nf">Deserialize</span><span class="p">(</span><span class="mi">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="nv">dictionary</span><span class="p">,</span> <span class="nc">Type</span> <span class="nv">type</span><span class="p">,</span> <span class="mi">IJsonSerializer</span> <span class="nv">serializer</span><span class="p">);</span>
+</span><span class='line'>    <span class="nv">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="n">Serialize</span><span class="p">(</span><span class="kt">object</span> <span class="n">obj</span><span class="p">,</span> <span class="mi">IJsonSerializer</span> <span class="nv">serializer</span><span class="p">);</span>
+</span><span class='line'>    <span class="nv">IEnumerable</span><span class="p">&lt;</span><span class="nc">Type</span><span class="p">&gt;</span> <span class="n">SupportedTypes</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="p">}</span>
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
@@ -275,10 +275,10 @@
 <span class='line-number'>132</span>
 </pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">public</span> <span class="k">class</span> <span class="nc">NewtonsoftJsonConverter</span> <span class="p">:</span> <span class="nc">JsonConverter</span>
 </span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="k">private</span> <span class="nc">IJsonConverter</span> <span class="nv">_converter</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">private</span> <span class="nc">IJsonSerializer</span> <span class="nv">_serializer</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">private</span> <span class="mi">IJsonConverter</span> <span class="nv">_converter</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">private</span> <span class="mi">IJsonSerializer</span> <span class="nv">_serializer</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="k">public</span> <span class="nf">NewtonsoftJsonConverter</span><span class="p">(</span><span class="nc">IJsonSerializer</span> <span class="nv">serializer</span><span class="p">,</span> <span class="nc">IJsonConverter</span> <span class="nv">converter</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">public</span> <span class="nf">NewtonsoftJsonConverter</span><span class="p">(</span><span class="mi">IJsonSerializer</span> <span class="nv">serializer</span><span class="p">,</span> <span class="mi">IJsonConverter</span> <span class="nv">converter</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">{</span>
 </span><span class='line'>        <span class="n">_serializer</span> <span class="p">=</span> <span class="n">serializer</span><span class="p">;</span>
 </span><span class='line'>        <span class="n">_converter</span> <span class="p">=</span> <span class="n">converter</span><span class="p">;</span>
@@ -300,10 +300,10 @@
 </span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
 </span><span class='line'>            <span class="k">return</span> <span class="n">value</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>        <span class="k">if</span> <span class="p">(!(</span><span class="n">value</span> <span class="k">is</span> <span class="nc">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;))</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(!(</span><span class="n">value</span> <span class="k">is</span> <span class="mi">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;))</span>
 </span><span class='line'>            <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="p">(</span><span class="s">&quot;Expected dictionary but found a list&quot;</span><span class="p">);</span>
 </span><span class='line'>
-</span><span class='line'>        <span class="n">value</span> <span class="p">=</span> <span class="n">_converter</span><span class="p">.</span><span class="n">Deserialize</span><span class="p">((</span><span class="nc">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;)</span><span class="n">value</span><span class="p">,</span> <span class="n">objectType</span><span class="p">,</span> <span class="n">_serializer</span><span class="p">);</span>
+</span><span class='line'>        <span class="n">value</span> <span class="p">=</span> <span class="n">_converter</span><span class="p">.</span><span class="n">Deserialize</span><span class="p">((</span><span class="nv">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;)</span><span class="n">value</span><span class="p">,</span> <span class="n">objectType</span><span class="p">,</span> <span class="n">_serializer</span><span class="p">);</span>
 </span><span class='line'>
 </span><span class='line'>        <span class="k">return</span> <span class="n">value</span><span class="p">;</span>
 </span><span class='line'>    <span class="p">}</span>
@@ -318,9 +318,9 @@
 </span><span class='line'>
 </span><span class='line'>        <span class="k">switch</span> <span class="p">(</span><span class="n">reader</span><span class="p">.</span><span class="n">TokenType</span><span class="p">)</span>
 </span><span class='line'>        <span class="p">{</span>
-</span><span class='line'>            <span class="k">case</span> <span class="n">JsonToken</span><span class="p">.</span><span class="n">StartObject</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">case</span> <span class="nc">JsonToken</span><span class="p">.</span><span class="nv">StartObject</span><span class="p">:</span>
 </span><span class='line'>                <span class="k">return</span> <span class="nf">ReadObject</span><span class="p">(</span><span class="n">reader</span><span class="p">);</span>
-</span><span class='line'>            <span class="k">case</span> <span class="n">JsonToken</span><span class="p">.</span><span class="n">StartArray</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">case</span> <span class="nc">JsonToken</span><span class="p">.</span><span class="nv">StartArray</span><span class="p">:</span>
 </span><span class='line'>                <span class="k">return</span> <span class="nf">ReadList</span><span class="p">(</span><span class="n">reader</span><span class="p">);</span>
 </span><span class='line'>            <span class="k">default</span><span class="p">:</span>
 </span><span class='line'>                <span class="k">if</span> <span class="p">(</span><span class="n">IsPrimitiveToken</span><span class="p">(</span><span class="n">reader</span><span class="p">.</span><span class="n">TokenType</span><span class="p">))</span>
@@ -334,14 +334,14 @@
 </span><span class='line'>    <span class="p">{</span>
 </span><span class='line'>        <span class="k">switch</span> <span class="p">(</span><span class="n">token</span><span class="p">)</span>
 </span><span class='line'>        <span class="p">{</span>
-</span><span class='line'>            <span class="k">case</span> <span class="n">JsonToken</span><span class="p">.</span><span class="n">Integer</span><span class="p">:</span>
-</span><span class='line'>            <span class="k">case</span> <span class="n">JsonToken</span><span class="p">.</span><span class="n">Float</span><span class="p">:</span>
-</span><span class='line'>            <span class="k">case</span> <span class="n">JsonToken</span><span class="p">.</span><span class="n">String</span><span class="p">:</span>
-</span><span class='line'>            <span class="k">case</span> <span class="n">JsonToken</span><span class="p">.</span><span class="n">Boolean</span><span class="p">:</span>
-</span><span class='line'>            <span class="k">case</span> <span class="n">JsonToken</span><span class="p">.</span><span class="n">Undefined</span><span class="p">:</span>
-</span><span class='line'>            <span class="k">case</span> <span class="n">JsonToken</span><span class="p">.</span><span class="n">Null</span><span class="p">:</span>
-</span><span class='line'>            <span class="k">case</span> <span class="n">JsonToken</span><span class="p">.</span><span class="n">Date</span><span class="p">:</span>
-</span><span class='line'>            <span class="k">case</span> <span class="n">JsonToken</span><span class="p">.</span><span class="n">Bytes</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">case</span> <span class="nc">JsonToken</span><span class="p">.</span><span class="nv">Integer</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">case</span> <span class="nc">JsonToken</span><span class="p">.</span><span class="nv">Float</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">case</span> <span class="nc">JsonToken</span><span class="p">.</span><span class="nv">String</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">case</span> <span class="nc">JsonToken</span><span class="p">.</span><span class="nv">Boolean</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">case</span> <span class="nc">JsonToken</span><span class="p">.</span><span class="nv">Undefined</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">case</span> <span class="nc">JsonToken</span><span class="p">.</span><span class="nv">Null</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">case</span> <span class="nc">JsonToken</span><span class="p">.</span><span class="nv">Date</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">case</span> <span class="nc">JsonToken</span><span class="p">.</span><span class="nv">Bytes</span><span class="p">:</span>
 </span><span class='line'>                <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
 </span><span class='line'>            <span class="k">default</span><span class="p">:</span>
 </span><span class='line'>                <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
@@ -350,20 +350,20 @@
 </span><span class='line'>
 </span><span class='line'>    <span class="k">private</span> <span class="kt">object</span> <span class="nf">ReadList</span><span class="p">(</span><span class="nc">JsonReader</span> <span class="nv">reader</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="nc">IList</span><span class="p">&lt;</span><span class="kt">object</span><span class="p">&gt;</span> <span class="nv">list</span> <span class="p">=</span> <span class="k">new</span> <span class="nc">List</span><span class="p">&lt;</span><span class="kt">object</span><span class="p">&gt;();</span>
+</span><span class='line'>        <span class="mi">IList</span><span class="p">&lt;</span><span class="kt">object</span><span class="p">&gt;</span> <span class="nv">list</span> <span class="p">=</span> <span class="k">new</span> <span class="nc">List</span><span class="p">&lt;</span><span class="kt">object</span><span class="p">&gt;();</span>
 </span><span class='line'>
 </span><span class='line'>        <span class="k">while</span> <span class="p">(</span><span class="n">reader</span><span class="p">.</span><span class="n">Read</span><span class="p">())</span>
 </span><span class='line'>        <span class="p">{</span>
 </span><span class='line'>            <span class="k">switch</span> <span class="p">(</span><span class="n">reader</span><span class="p">.</span><span class="n">TokenType</span><span class="p">)</span>
 </span><span class='line'>            <span class="p">{</span>
-</span><span class='line'>                <span class="k">case</span> <span class="n">JsonToken</span><span class="p">.</span><span class="n">Comment</span><span class="p">:</span>
+</span><span class='line'>                <span class="k">case</span> <span class="nc">JsonToken</span><span class="p">.</span><span class="nv">Comment</span><span class="p">:</span>
 </span><span class='line'>                    <span class="k">break</span><span class="p">;</span>
 </span><span class='line'>                <span class="k">default</span><span class="p">:</span>
 </span><span class='line'>                    <span class="kt">object</span> <span class="nv">v</span> <span class="p">=</span> <span class="n">ReadValue</span><span class="p">(</span><span class="n">reader</span><span class="p">);</span>
 </span><span class='line'>
 </span><span class='line'>                    <span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
 </span><span class='line'>                    <span class="k">break</span><span class="p">;</span>
-</span><span class='line'>                <span class="k">case</span> <span class="n">JsonToken</span><span class="p">.</span><span class="n">EndArray</span><span class="p">:</span>
+</span><span class='line'>                <span class="k">case</span> <span class="nc">JsonToken</span><span class="p">.</span><span class="nv">EndArray</span><span class="p">:</span>
 </span><span class='line'>                    <span class="k">return</span> <span class="n">list</span><span class="p">;</span>
 </span><span class='line'>            <span class="p">}</span>
 </span><span class='line'>        <span class="p">}</span>
@@ -373,13 +373,13 @@
 </span><span class='line'>
 </span><span class='line'>    <span class="k">private</span> <span class="kt">object</span> <span class="nf">ReadObject</span><span class="p">(</span><span class="nc">JsonReader</span> <span class="nv">reader</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="nc">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="nv">dictionary</span> <span class="p">=</span> <span class="k">new</span> <span class="nc">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;();</span>
+</span><span class='line'>        <span class="mi">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="nv">dictionary</span> <span class="p">=</span> <span class="k">new</span> <span class="nc">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;();</span>
 </span><span class='line'>
 </span><span class='line'>        <span class="k">while</span> <span class="p">(</span><span class="n">reader</span><span class="p">.</span><span class="n">Read</span><span class="p">())</span>
 </span><span class='line'>        <span class="p">{</span>
 </span><span class='line'>            <span class="k">switch</span> <span class="p">(</span><span class="n">reader</span><span class="p">.</span><span class="n">TokenType</span><span class="p">)</span>
 </span><span class='line'>            <span class="p">{</span>
-</span><span class='line'>                <span class="k">case</span> <span class="n">JsonToken</span><span class="p">.</span><span class="n">PropertyName</span><span class="p">:</span>
+</span><span class='line'>                <span class="k">case</span> <span class="nc">JsonToken</span><span class="p">.</span><span class="nv">PropertyName</span><span class="p">:</span>
 </span><span class='line'>                    <span class="kt">string</span> <span class="nv">propertyName</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">Value</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
 </span><span class='line'>
 </span><span class='line'>                    <span class="k">if</span> <span class="p">(!</span><span class="n">reader</span><span class="p">.</span><span class="n">Read</span><span class="p">())</span>
@@ -389,9 +389,9 @@
 </span><span class='line'>
 </span><span class='line'>                    <span class="n">dictionary</span><span class="p">[</span><span class="n">propertyName</span><span class="p">]</span> <span class="p">=</span> <span class="n">v</span><span class="p">;</span>
 </span><span class='line'>                    <span class="k">break</span><span class="p">;</span>
-</span><span class='line'>                <span class="k">case</span> <span class="n">JsonToken</span><span class="p">.</span><span class="n">Comment</span><span class="p">:</span>
+</span><span class='line'>                <span class="k">case</span> <span class="nc">JsonToken</span><span class="p">.</span><span class="nv">Comment</span><span class="p">:</span>
 </span><span class='line'>                    <span class="k">break</span><span class="p">;</span>
-</span><span class='line'>                <span class="k">case</span> <span class="n">JsonToken</span><span class="p">.</span><span class="n">EndObject</span><span class="p">:</span>
+</span><span class='line'>                <span class="k">case</span> <span class="nc">JsonToken</span><span class="p">.</span><span class="nv">EndObject</span><span class="p">:</span>
 </span><span class='line'>                    <span class="k">return</span> <span class="n">dictionary</span><span class="p">;</span>
 </span><span class='line'>            <span class="p">}</span>
 </span><span class='line'>        <span class="p">}</span>
@@ -401,7 +401,7 @@
 </span><span class='line'>
 </span><span class='line'>    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">WriteJson</span><span class="p">(</span><span class="nc">JsonWriter</span> <span class="nv">writer</span><span class="p">,</span> <span class="kt">object</span> <span class="n">value</span><span class="p">,</span> <span class="nc">JsonSerializer</span> <span class="nv">serializer</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="nc">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="nv">dictionary</span> <span class="p">=</span> <span class="n">_converter</span><span class="p">.</span><span class="n">Serialize</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">_serializer</span><span class="p">);</span>
+</span><span class='line'>        <span class="mi">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="nv">dictionary</span> <span class="p">=</span> <span class="n">_converter</span><span class="p">.</span><span class="n">Serialize</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">_serializer</span><span class="p">);</span>
 </span><span class='line'>        <span class="n">serializer</span><span class="p">.</span><span class="n">Serialize</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">);</span>
 </span><span class='line'>    <span class="p">}</span>
 </span><span class='line'><span class="p">}</span>
@@ -442,36 +442,36 @@
 <span class='line-number'>30</span>
 <span class='line-number'>31</span>
 <span class='line-number'>32</span>
-</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">public</span> <span class="k">class</span> <span class="nc">NewtonsoftJsonSerializer</span> <span class="p">:</span> <span class="nc">IJsonSerializer</span>
+</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">public</span> <span class="k">class</span> <span class="nc">NewtonsoftJsonSerializer</span> <span class="p">:</span> <span class="mi">IJsonSerializer</span>
 </span><span class='line'><span class="p">{</span>
 </span><span class='line'>    <span class="k">private</span> <span class="nc">JsonSerializerSettings</span> <span class="nv">_settings</span> <span class="p">=</span> <span class="k">new</span> <span class="nc">JsonSerializerSettings</span><span class="p">();</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="k">public</span> <span class="k">void</span> <span class="nf">RegisterConverters</span><span class="p">(</span><span class="nc">IEnumerable</span><span class="p">&lt;</span><span class="nc">IJsonConverter</span><span class="p">&gt;</span> <span class="nv">converters</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">void</span> <span class="nf">RegisterConverters</span><span class="p">(</span><span class="mi">IEnumerable</span><span class="p">&lt;</span><span class="mi">IJsonConverter</span><span class="p">&gt;</span> <span class="nv">converters</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="k">foreach</span> <span class="p">(</span><span class="nc">IJsonConverter</span> <span class="nv">converter</span> <span class="k">in</span> <span class="n">converters</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">foreach</span> <span class="p">(</span><span class="mi">IJsonConverter</span> <span class="nv">converter</span> <span class="k">in</span> <span class="n">converters</span><span class="p">)</span>
 </span><span class='line'>            <span class="n">_settings</span><span class="p">.</span><span class="n">Converters</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="nc">NewtonsoftJsonConverter</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">converter</span><span class="p">));</span>
 </span><span class='line'>    <span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="k">public</span> <span class="n">T</span> <span class="nf">ConvertToType</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;(</span><span class="nc">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="nv">dictionary</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">public</span> <span class="n">T</span> <span class="nf">ConvertToType</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;(</span><span class="mi">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;</span> <span class="nv">dictionary</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">{</span>
 </span><span class='line'>        <span class="kt">string</span> <span class="nv">intermediate</span> <span class="p">=</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">dictionary</span><span class="p">);</span>
-</span><span class='line'>        <span class="nc">T</span> <span class="nv">value</span> <span class="p">=</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">DeserializeObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;(</span><span class="n">intermediate</span><span class="p">);</span>
+</span><span class='line'>        <span class="nc">T</span> <span class="nv">value</span> <span class="p">=</span> <span class="nv">JsonConvert.DeserializeObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;(</span><span class="n">intermediate</span><span class="p">);</span>
 </span><span class='line'>        <span class="k">return</span> <span class="n">value</span><span class="p">;</span>
 </span><span class='line'>    <span class="p">}</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">public</span> <span class="n">T</span> <span class="nf">Deserialize</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;(</span><span class="kt">string</span> <span class="n">input</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">DeserializeObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;(</span><span class="n">input</span><span class="p">,</span> <span class="n">_settings</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nc">JsonConvert</span><span class="p">.</span><span class="nv">DeserializeObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;(</span><span class="n">input</span><span class="p">,</span> <span class="n">_settings</span><span class="p">);</span>
 </span><span class='line'>    <span class="p">}</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">public</span> <span class="kt">string</span> <span class="nf">Serialize</span><span class="p">(</span><span class="kt">object</span> <span class="n">obj</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">Formatting</span><span class="p">.</span><span class="n">None</span><span class="p">,</span> <span class="n">_settings</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nc">JsonConvert</span><span class="p">.</span><span class="nv">SerializeObject</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">Formatting</span><span class="p">.</span><span class="n">None</span><span class="p">,</span> <span class="n">_settings</span><span class="p">);</span>
 </span><span class='line'>    <span class="p">}</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">public</span> <span class="kt">string</span> <span class="nf">DefaultSerialize</span><span class="p">(</span><span class="kt">object</span> <span class="n">obj</span><span class="p">)</span>
 </span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">obj</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nc">JsonConvert</span><span class="p">.</span><span class="nv">SerializeObject</span><span class="p">(</span><span class="n">obj</span><span class="p">);</span>
 </span><span class='line'>    <span class="p">}</span>
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
