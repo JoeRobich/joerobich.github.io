@@ -1,6 +1,4 @@
-﻿/// <reference path="./esri.d.ts"/>
-/// <reference path="./dojo.d.ts"/>
-define(["require", "exports", "esri/map", "esri/SpatialReference", "esri/geometry/Point", "esri/geometry/Polygon", "esri/request", "esri/layers/GraphicsLayer", "esri/graphic", "esri/Color", "esri/symbols/Font", "esri/symbols/SimpleMarkerSymbol", "esri/symbols/SimpleLineSymbol", "esri/symbols/SimpleFillSymbol", "esri/symbols/TextSymbol", "esri/tasks/GeometryService", "esri/tasks/locator", "esri/tasks/ProjectParameters", "dojo/Deferred"], function(require, exports, Map, SpatialReference, Point, Polygon, esriRequest, GraphicsLayer, Graphic, Color, Font, SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol, TextSymbol, GeometryService, Locator, ProjectParameters, Deferred) {
+﻿define(["require", "exports", "esri/map", "esri/SpatialReference", "esri/geometry/Point", "esri/geometry/Polygon", "esri/request", "esri/layers/GraphicsLayer", "esri/graphic", "esri/Color", "esri/symbols/Font", "esri/symbols/SimpleMarkerSymbol", "esri/symbols/SimpleLineSymbol", "esri/symbols/SimpleFillSymbol", "esri/symbols/TextSymbol", "esri/tasks/GeometryService", "esri/tasks/locator", "esri/tasks/ProjectParameters", "dojo/Deferred"], function(require, exports, Map, SpatialReference, Point, Polygon, esriRequest, GraphicsLayer, Graphic, Color, Font, SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol, TextSymbol, GeometryService, Locator, ProjectParameters, Deferred) {
     
 
     var MapController = (function () {
@@ -22,18 +20,12 @@ define(["require", "exports", "esri/map", "esri/SpatialReference", "esri/geometr
 
         MapController.prototype.setupMap = function () {
             var chattanoogaLocation = new Point(-85.2672, 35.0456, this.wgs84);
-
-            var mapOptions = {};
-            mapOptions.basemap = "osm";
-            mapOptions.center = chattanoogaLocation;
-            mapOptions.zoom = 13;
-
-            this.map = new Map(this.mapDiv, mapOptions);
+            this.map = new Map(this.mapDiv, { basemap: "osm", center: chattanoogaLocation, zoom: 13 });
 
             this.cityLayer = new GraphicsLayer({ opacity: .3 });
             this.map.addLayer(this.cityLayer);
 
-            this.addressLayer = new GraphicsLayer({ opacity: .6 });
+            this.addressLayer = new GraphicsLayer({ opacity: .7 });
             this.map.addLayer(this.addressLayer);
         };
 
@@ -41,93 +33,102 @@ define(["require", "exports", "esri/map", "esri/SpatialReference", "esri/geometr
             var self = this;
             self.cityLayer.clear();
 
-            var geometryRequest = esriRequest({ url: "geo/chattanooga.geojson", callback: "jsoncallback" });
-            geometryRequest.then(function (response) {
+            esriRequest({ url: "geo/chattanooga.geojson", callback: "jsoncallback" }).then(function (response) {
                 var feature = response.features[0];
 
                 self.cityPolygon = new Polygon(feature.geometry.coordinates);
-
-                //self.cityPolygon.rings = self.cityPolygon.rings.map((ring, index) => index == 0 ? ring : !self.cityPolygon.isClockwise(ring) ? ring : ring.reverse());
                 self.cityPolygon.setSpatialReference(self.wgs84);
 
-                var outline = new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, Color.fromHex("#0000ff"), 2);
-                var citySymbol = new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID, outline, Color.fromHex("#0000ff"));
-
-                var cityGraphic = new Graphic(self.cityPolygon, citySymbol);
-                self.cityLayer.add(cityGraphic);
+                var citySymbol = self.getCitySymbol();
+                self.cityLayer.add(new Graphic(self.cityPolygon, citySymbol));
             });
+        };
+
+        MapController.prototype.getCitySymbol = function () {
+            var color = Color.fromString("blue");
+            var outline = new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, color, 2);
+            var citySymbol = new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID, outline, color);
+            return citySymbol;
         };
 
         MapController.prototype.checkAddress = function (address) {
-            var deferred = new Deferred();
+            address = address.trim();
 
             var self = this;
             self.addressLayer.clear();
+            var addressLocation = null;
 
-            self.queryWithHamilton(address, deferred, self);
-            deferred.promise.then(function (isWithin) {
-                var text = isWithin ? "Within" : "Not Within";
-                var font = new Font("24pt", Font.STYLE_NORMAL, Font.VARIANT_NORMAL, Font.WEIGHT_BOLD, "sans-serif");
-                var textSymbol = new TextSymbol(text, font, Color.fromHex("#000"));
-                textSymbol.horizontalAlignment = TextSymbol.ALIGN_MIDDLE;
-                textSymbol.setOffset(0, 13);
+            self.geocodeAddress(self.hamiltonGeocoder, { "Single Line Input": address }).then(null, function (error) {
+                return self.geocodeAddress(self.worldGeocoder, { "SingleLine": address });
+            }).then(function (candidate) {
+                return self.projectGeometry(self.geometryService, candidate.location, self.wgs84);
+            }).then(function (location) {
+                addressLocation = location;
+                self.map.centerAndZoom(addressLocation, 20);
 
-                self.addressLayer.add(new Graphic(self.addressLocation, textSymbol));
+                var text = "Checking...";
+                self.addTextGraphic(self.addressLayer, addressLocation, text);
 
-                var color = isWithin ? "#00ff00" : "#ff0000";
-                var outline = new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, Color.fromHex(color), 2);
-                var addressSymbol = new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_DIAMOND, 16, outline, Color.fromHex(color));
+                var color = Color.fromString("grey");
+                self.addAddressGraphic(self.addressLayer, addressLocation, color);
 
-                var addressGraphic = new Graphic(self.addressLocation, addressSymbol);
-                self.addressLayer.add(addressGraphic);
+                return self.intersects(self.geometryService, self.cityPolygon, location);
+            }).then(function (intersects) {
+                self.addressLayer.clear();
 
-                self.map.centerAndZoom(self.addressLocation, 20);
+                var text = intersects ? "Within" : "Not Within";
+                self.addTextGraphic(self.addressLayer, addressLocation, text);
+
+                var color = intersects ? Color.fromString("green") : Color.fromString("red");
+                self.addAddressGraphic(self.addressLayer, addressLocation, color);
             });
         };
 
-        MapController.prototype.queryWithHamilton = function (address, deferred, self) {
-            self.hamiltonGeocoder.addressToLocations({ address: { "Single Line Input": address } }, function (candidates) {
-                if (!candidates.length) {
-                    self.queryWithWorld(address, deferred, self);
-                    return;
-                }
-
-                var candidate = candidates[0];
-
-                var params = new ProjectParameters();
-                params.geometries = [candidate.location];
-                params.outSR = self.wgs84;
-                self.geometryService.project(params, function (locations) {
-                    self.addressLocation = locations[0];
-
-                    self.geometryService.intersect([self.addressLocation], self.cityPolygon, function (result) {
-                        deferred.resolve(!isNaN(result[0].x));
-                    });
-                });
+        MapController.prototype.geocodeAddress = function (locator, address) {
+            var deferred = new Deferred();
+            locator.addressToLocations({ address: address }, deferred.resolve, deferred.reject);
+            return deferred.promise.then(function (candidates) {
+                if (!candidates.length)
+                    throw new Error("No candidates found.");
+                return candidates[0];
             });
         };
 
-        MapController.prototype.queryWithWorld = function (address, deferred, self) {
-            self.worldGeocoder.addressToLocations({ address: { "SingleLine": address } }, function (candidates) {
-                if (!candidates.length) {
-                    self.queryWithWorld(address, deferred, self);
-                    return;
-                }
-
-                var candidate = candidates[0];
-
-                var params = new ProjectParameters();
-                params.geometries = [candidate.location];
-                params.outSR = self.wgs84;
-                self.geometryService.project(params, function (locations) {
-                    self.addressLocation = locations[0];
-
-                    deferred.resolve(false);
-                });
+        MapController.prototype.projectGeometry = function (geometryService, point, outSpatialReference) {
+            var deferred = new Deferred();
+            var parameters = new ProjectParameters();
+            parameters.geometries = [point];
+            parameters.outSR = outSpatialReference;
+            geometryService.project(parameters, deferred.resolve, deferred.reject);
+            return deferred.promise.then(function (locations) {
+                return locations[0];
             });
+        };
+
+        MapController.prototype.intersects = function (geometryService, polygon, point) {
+            var deferred = new Deferred();
+            geometryService.intersect([polygon], point, deferred.resolve, deferred.reject);
+            return deferred.promise.then(function (intersections) {
+                return !isNaN(intersections[0].x);
+            });
+        };
+
+        MapController.prototype.addTextGraphic = function (layer, point, text) {
+            var font = new Font("24pt", Font.STYLE_NORMAL, Font.VARIANT_NORMAL, Font.WEIGHT_BOLD, "sans-serif");
+            var textSymbol = new TextSymbol(text, font, Color.fromString("black"));
+            textSymbol.horizontalAlignment = TextSymbol.ALIGN_MIDDLE;
+            textSymbol.setOffset(0, 13);
+            var textGraphic = new Graphic(point, textSymbol);
+            layer.add(textGraphic);
+        };
+
+        MapController.prototype.addAddressGraphic = function (layer, point, color) {
+            var outline = new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, color, 2);
+            var addressSymbol = new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_DIAMOND, 16, outline, color);
+            var addressGraphic = new Graphic(point, addressSymbol);
+            layer.add(addressGraphic);
         };
         return MapController;
     })();
     return MapController;
 });
-//# sourceMappingURL=MapController.js.map
