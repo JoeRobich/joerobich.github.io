@@ -1,7 +1,10 @@
 ﻿define(["require", "exports", "./HashController", "./MapController"], function(require, exports, HashController, MapController) {
     var urlController = new HashController();
     var mapController = new MapController("map");
-    mapController.start();
+	
+    mapController.start().then(function (results) {
+        return checkForAddress();
+    });
 
     var addressInput = document.getElementById("address");
     addressInput.onkeypress = function (evt) {
@@ -21,5 +24,4 @@
     };
 
     window.onhashchange = checkForAddress;
-    checkForAddress();
 });
