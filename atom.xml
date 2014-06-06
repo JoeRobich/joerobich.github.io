@@ -4,7 +4,7 @@
   <title><![CDATA[Joey Robichaud]]></title>
   <link href="http://www.joeyrobichaud.com/atom.xml" rel="self"/>
   <link href="http://www.joeyrobichaud.com/"/>
-  <updated>2014-06-02T08:40:04-04:00</updated>
+  <updated>2014-06-06T12:03:37-04:00</updated>
   <id>http://www.joeyrobichaud.com/</id>
   <author>
     <name><![CDATA[Joey Robichaud]]></name>
@@ -12,6 +12,66 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Yoga Pro 2 Trackpad Tips]]></title>
+    <link href="http://www.joeyrobichaud.com/blog/2014/06/06/yoga-pro-2-trackpad-tips/"/>
+    <updated>2014-06-06T11:16:56-04:00</updated>
+    <id>http://www.joeyrobichaud.com/blog/2014/06/06/yoga-pro-2-trackpad-tips</id>
+    <content type="html"><![CDATA[<p>As a remote worker I often work away from a proper desk and don&rsquo;t have access to a real mouse. In fact, after over 6 years of working remotely, I don&rsquo;t even use a mouse when I am work at home. Which is why I love a good trackpad.</p>
+
+<p>The Lenovo Yoga Pro 2 is a wonderful laptop with a great trackpad. However, there were a couple of things I wanted from it that the Synaptics settings couldn&rsquo;t configure, even though they were supported by the driver. I am writing this post so in the future when I do the inevitable reinstall, I have instructions for getting back into a good state.</p>
+
+<h2>Get rid of fake buttons</h2>
+
+<p>I am used to working with trackpads that have &ldquo;real&rdquo; buttons. Unfortunately, the Yoga turns the bottom quarter of the trackpad into fake touch buttons. The problem with these fake buttons is that I never know which one I am going to press unless I look. After months of working with the Yoga, I was still right-clicking most of the time and it was driving me insane.</p>
+
+<p>Follow the steps below to do away with the buttons and reclaim the full trackpad:</p>
+
+<ol>
+<li>Open Regedit</li>
+<li>Navigate to HKEY_CURRENT_USER\Software\Synaptics\SynTP\TouchPadPS2</li>
+<li>Set ExButton4Action to 1 (By default it will be 2)</li>
+</ol>
+
+
+<h2>How to right-click again?</h2>
+
+<p>So without the fake buttons there isn&rsquo;t an obvious way to right-click. In the Synaptics settings you can set up right-click on two finger click, but who has the strength for that? What we really want is right-click on two finger tap.</p>
+
+<p>Follow the steps below to get right-click on two finger tap:</p>
+
+<ol>
+<li>In Regedit</li>
+<li>Navigate to HKEY_CURRENT_USER\Software\Synaptics\SynTP\TouchPadPS2</li>
+<li>Set 2FingerTapAction to 2</li>
+<li>Set 2FingerPressButtonAction to 2 (If you want the right-click on two finger click)</li>
+</ol>
+
+
+<h2>I have 3 fingers; Can I use them for something?</h2>
+
+<p>As an ex-mouse user I enjoyed using the middle mouse button to open links in new tabs, wouldn&rsquo;t it be nice to get a middle-click on 3 finger tap?</p>
+
+<p>Follow the steps below to get middle-click on three finger tap:</p>
+
+<ol>
+<li>In Regedit</li>
+<li>Navigate to HKEY_CURRENT_USER\Software\Synaptics\SynTP\TouchPadPS2\3FingerGestures</li>
+<li>Set ActionID0 to 12 hex</li>
+<li>Set PluginID0 to SynTP</li>
+<li>Navigate up to HKEY_CURRENT_USER\Software\Synaptics\SynTP\TouchPadPS2</li>
+<li>Set 3FingerTapAction to 4</li>
+<li>Set 3FingerTapPlugInActionID to 0</li>
+<li>Clear the value in 3FingerTapPlugInID</li>
+</ol>
+
+
+<h2>Time for a reboot</h2>
+
+<p>After making the registry changes you will need to reboot for them to take effect. Beware, I have noticed that if I use the Synaptics settings tool to make further tweaks, some of the registry changes get reverted, so keep these steps handy.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Story of asfac]]></title>

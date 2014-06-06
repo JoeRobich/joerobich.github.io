@@ -9,7 +9,7 @@
   <meta name="author" content="Joey Robichaud">
 
   
-  <meta name="description" content="So you know how I was saying the rest of our team worked overnight? Yeah. David and I woke up to some huge news! It seems that it had been decided to &hellip;">
+  <meta name="description" content="Knowing that we had made a commitment and wanting our efforts to be utilized, we put in some extra hours to get an inital release together. John &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,52 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/15/sswc-and-jquery-image-rotator-on-codeplex/">SSWC and jQuery Image Rotator on CodePlex</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-15T00:00:00-05:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Knowing that we had made a commitment and wanting our efforts to be utilized, we put in some extra hours to get an inital release together. <a href="http://twitter.com/jtolar">John Tolar</a> emailed us his Social Share Bar widget and some screenshots for inclusion in the project. However, there were a few issues we felt must be resolved before we could release the widgets to the world.</p>
+
+<p>First, the <a href="http://www.sitefinity.com/devnet/forums/sitefinity-4-x/general-discussions/jquery-plugins-and-or-authoring-custom-jquery-functions-not-supported.aspx">jQuery plugin issue</a> we found on <a href="http://thedevstop.wordpress.com/2011/02/02/givecamp-day-3/">Day 3</a> of <a href="http://givecamp.org">GiveCamp</a>. It took a good bit of trial and error, but David came up with something a little less disgusting than what we had. RegisterScriptInclude had consistently loaded the script references too early in the page, and they were subject the Sitefinity issue linked above. Using the ClientScriptManager&rsquo;s RegisterStartupScript, however, pushed the script reference to the bottom of page and avoided the redefinition of jQuery. With our scripts now being included once a piece in a fairly sensible location, we closed this issue.</p>
+
+<p>The other two issues were fairly trivial. First, we ensured that the generated HTML elements got unique ids. We had been generating facebookImageRotator, flickrImageRotator, etc., but if you threw two Facebook rotators on the page you&rsquo;d get a duplicate. We used the user ids, album names, etc. to make it a bit more unique. The last issue was having our widgets include <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">prettyPhoto</a> automatically instead of relying on documentation to guide the user.</p>
+
+<p>We polished up the documentation for Sitefinity developers interested in using the controls in their sites as well as those wanting to contribute to the project. David also started a separate CodePlex for hosting the fully independant <a href="http://jqueryimagerotator.codeplex.com">jQuery rotator plugin</a>.</p>
+
+<p>Feel free to download the controls and please provide some feedback.</p>
+
+<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/02/15/sswc-and-jquery-image-rotator-on-codeplex/">The DevStop</a>.</em></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -238,6 +284,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/06/06/yoga-pro-2-trackpad-tips/">Yoga Pro 2 Trackpad Tips</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/01/28/the-story-of-asfac/">The Story of asfac</a>
       </li>
     
@@ -251,10 +301,6 @@
     
       <li class="post">
         <a href="/blog/2012/01/27/consolas-for-github/">Consolas for github</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/01/04/vibrantink-theme-for-flashdevelop/">VibrantInk Theme for FlashDevelop</a>
       </li>
     
   </ul>

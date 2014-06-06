@@ -2,84 +2,88 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://www.joeyrobichaud.com/blog/2011/02/01/givecamp-day-1/</loc>
-        <lastmod>2014-04-03T11:06:38-04:00</lastmod>
+        <lastmod>2014-06-05T12:04:30-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.joeyrobichaud.com/blog/2011/02/04/givecamp-day-2/</loc>
-        <lastmod>2014-04-03T11:03:24-04:00</lastmod>
+        <lastmod>2014-06-05T12:04:30-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.joeyrobichaud.com/blog/2011/02/08/givecamp-day-3/</loc>
-        <lastmod>2014-04-03T11:37:01-04:00</lastmod>
+        <lastmod>2014-06-05T12:04:30-04:00</lastmod>
     </url>
     <url>
         <loc>
             http://www.joeyrobichaud.com/blog/2011/02/15/sswc-and-jquery-image-rotator-on-codeplex/
         </loc>
-        <lastmod>2014-04-03T11:41:12-04:00</lastmod>
+        <lastmod>2014-06-05T12:04:30-04:00</lastmod>
     </url>
     <url>
         <loc>
             http://www.joeyrobichaud.com/blog/2011/08/16/add-settings-hotkeys-to-visual-studio-2010/
         </loc>
-        <lastmod>2014-04-03T11:30:35-04:00</lastmod>
+        <lastmod>2014-06-05T12:04:30-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.joeyrobichaud.com/blog/2011/08/17/vibrantink-theme-for-flashbuilder/</loc>
-        <lastmod>2014-04-03T11:42:42-04:00</lastmod>
+        <lastmod>2014-06-05T12:04:30-04:00</lastmod>
     </url>
     <url>
         <loc>
             http://www.joeyrobichaud.com/blog/2011/08/24/getting-started-with-manatee-and-sql-server-ce/
         </loc>
-        <lastmod>2014-04-03T11:59:42-04:00</lastmod>
+        <lastmod>2014-06-05T12:04:30-04:00</lastmod>
     </url>
     <url>
         <loc>
             http://www.joeyrobichaud.com/blog/2011/08/29/vibrantink-theme-for-notepadplusplus/
         </loc>
-        <lastmod>2014-04-03T11:56:34-04:00</lastmod>
+        <lastmod>2014-06-05T12:04:30-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.joeyrobichaud.com/blog/2012/01/04/vibrantink-theme-for-flashdevelop/</loc>
-        <lastmod>2014-04-03T11:21:20-04:00</lastmod>
+        <lastmod>2014-06-05T12:04:30-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.joeyrobichaud.com/blog/2012/01/27/consolas-for-github/</loc>
-        <lastmod>2014-04-03T11:18:16-04:00</lastmod>
+        <lastmod>2014-06-05T12:04:30-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.joeyrobichaud.com/blog/2012/02/03/making-a-code-library/</loc>
-        <lastmod>2014-04-03T12:01:23-04:00</lastmod>
+        <lastmod>2014-06-05T12:04:30-04:00</lastmod>
     </url>
     <url>
         <loc>
             http://www.joeyrobichaud.com/blog/2012/04/09/from-javascriptserializer-to-jsonnet/
         </loc>
-        <lastmod>2014-04-03T11:12:04-04:00</lastmod>
+        <lastmod>2014-06-05T12:04:30-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.joeyrobichaud.com/blog/2013/01/28/the-story-of-asfac/</loc>
-        <lastmod>2014-04-03T11:10:32-04:00</lastmod>
+        <lastmod>2014-06-05T12:04:30-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.joeyrobichaud.com/blog/2014/06/06/yoga-pro-2-trackpad-tips/</loc>
+        <lastmod>2014-06-06T12:02:59-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.joeyrobichaud.com/archives/</loc>
-        <lastmod>2014-04-03T12:01:23-04:00</lastmod>
+        <lastmod>2014-06-06T12:02:59-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.joeyrobichaud.com/blog/archives/</loc>
-        <lastmod>2014-04-03T12:01:23-04:00</lastmod>
+        <lastmod>2014-06-06T12:02:59-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.joeyrobichaud.com/blog/</loc>
-        <lastmod>2014-04-03T12:01:23-04:00</lastmod>
+        <lastmod>2014-06-06T12:02:59-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.joeyrobichaud.com/</loc>
-        <lastmod>2014-04-03T12:01:23-04:00</lastmod>
+        <lastmod>2014-06-06T12:02:59-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.joeyrobichaud.com/robots.txt</loc>
-        <lastmod>2014-03-30T14:48:49-04:00</lastmod>
+        <lastmod>2014-06-05T12:04:30-04:00</lastmod>
     </url>
 </urlset>

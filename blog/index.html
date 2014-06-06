@@ -9,7 +9,7 @@
   <meta name="author" content="Joey Robichaud">
 
   
-  <meta name="description" content="Asfac is a simple IoC container for ActionScript and this is the story of how it came into being. Genesis It is all Jon Skeet&rsquo;s fault really. I &hellip;">
+  <meta name="description" content="As a remote worker I often work away from a proper desk and don&rsquo;t have access to a real mouse. In fact, after over 6 years of working remotely &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,91 @@
   <div id="main">
     <div id="content">
       
+
+
+    <article class="post">
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/06/06/yoga-pro-2-trackpad-tips/">Yoga Pro 2 Trackpad Tips</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-06T11:16:56-04:00" pubdate data-updated="true">Jun 6<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As a remote worker I often work away from a proper desk and don&rsquo;t have access to a real mouse. In fact, after over 6 years of working remotely, I don&rsquo;t even use a mouse when I am work at home. Which is why I love a good trackpad.</p>
+
+<p>The Lenovo Yoga Pro 2 is a wonderful laptop with a great trackpad. However, there were a couple of things I wanted from it that the Synaptics settings couldn&rsquo;t configure, even though they were supported by the driver. I am writing this post so in the future when I do the inevitable reinstall, I have instructions for getting back into a good state.</p>
+
+<h2>Get rid of fake buttons</h2>
+
+<p>I am used to working with trackpads that have &ldquo;real&rdquo; buttons. Unfortunately, the Yoga turns the bottom quarter of the trackpad into fake touch buttons. The problem with these fake buttons is that I never know which one I am going to press unless I look. After months of working with the Yoga, I was still right-clicking most of the time and it was driving me insane.</p>
+
+<p>Follow the steps below to do away with the buttons and reclaim the full trackpad:</p>
+
+<ol>
+<li>Open Regedit</li>
+<li>Navigate to HKEY_CURRENT_USER\Software\Synaptics\SynTP\TouchPadPS2</li>
+<li>Set ExButton4Action to 1 (By default it will be 2)</li>
+</ol>
+
+
+<h2>How to right-click again?</h2>
+
+<p>So without the fake buttons there isn&rsquo;t an obvious way to right-click. In the Synaptics settings you can set up right-click on two finger click, but who has the strength for that? What we really want is right-click on two finger tap.</p>
+
+<p>Follow the steps below to get right-click on two finger tap:</p>
+
+<ol>
+<li>In Regedit</li>
+<li>Navigate to HKEY_CURRENT_USER\Software\Synaptics\SynTP\TouchPadPS2</li>
+<li>Set 2FingerTapAction to 2</li>
+<li>Set 2FingerPressButtonAction to 2 (If you want the right-click on two finger click)</li>
+</ol>
+
+
+<h2>I have 3 fingers; Can I use them for something?</h2>
+
+<p>As an ex-mouse user I enjoyed using the middle mouse button to open links in new tabs, wouldn&rsquo;t it be nice to get a middle-click on 3 finger tap?</p>
+
+<p>Follow the steps below to get middle-click on three finger tap:</p>
+
+<ol>
+<li>In Regedit</li>
+<li>Navigate to HKEY_CURRENT_USER\Software\Synaptics\SynTP\TouchPadPS2\3FingerGestures</li>
+<li>Set ActionID0 to 12 hex</li>
+<li>Set PluginID0 to SynTP</li>
+<li>Navigate up to HKEY_CURRENT_USER\Software\Synaptics\SynTP\TouchPadPS2</li>
+<li>Set 3FingerTapAction to 4</li>
+<li>Set 3FingerTapPlugInActionID to 0</li>
+<li>Clear the value in 3FingerTapPlugInID</li>
+</ol>
+
+
+<h2>Time for a reboot</h2>
+
+<p>After making the registry changes you will need to reboot for them to take effect. Beware, I have noticed that if I use the Synaptics settings tool to make further tweaks, some of the registry changes get reverted, so keep these steps handy.</p>
+</div>
+  
+  
+
+</article>
 
 
     <article class="post">
@@ -1290,50 +1375,6 @@
 <p>Now I have no more excuses to use tiny code during my next presentation and if you follow these steps then neither will you. You can download my all of my vssettings, the macro file, and even the toolbar images I didn&rsquo;t get to use <a href="https://docs.google.com/viewer?a=v&amp;pid=explorer&amp;chrome=true&amp;srcid=0B2UumFXyeY3BYzkzMDliZjQtNjRiMC00NjdjLThhMzUtZTYxYWJiNjYyMTgx&amp;hl=en_US">here</a>.</p>
 
 <p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/08/16/add-settings-hotkeys-to-visual-studio-2010/">The DevStop</a>.</em></p>
-</div>
-  
-  
-
-</article>
-
-
-    <article class="post">
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/02/15/sswc-and-jquery-image-rotator-on-codeplex/">SSWC and jQuery Image Rotator on CodePlex</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-02-15T00:00:00-05:00" pubdate data-updated="true"></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Knowing that we had made a commitment and wanting our efforts to be utilized, we put in some extra hours to get an inital release together. <a href="http://twitter.com/jtolar">John Tolar</a> emailed us his Social Share Bar widget and some screenshots for inclusion in the project. However, there were a few issues we felt must be resolved before we could release the widgets to the world.</p>
-
-<p>First, the <a href="http://www.sitefinity.com/devnet/forums/sitefinity-4-x/general-discussions/jquery-plugins-and-or-authoring-custom-jquery-functions-not-supported.aspx">jQuery plugin issue</a> we found on <a href="http://thedevstop.wordpress.com/2011/02/02/givecamp-day-3/">Day 3</a> of <a href="http://givecamp.org">GiveCamp</a>. It took a good bit of trial and error, but David came up with something a little less disgusting than what we had. RegisterScriptInclude had consistently loaded the script references too early in the page, and they were subject the Sitefinity issue linked above. Using the ClientScriptManager&rsquo;s RegisterStartupScript, however, pushed the script reference to the bottom of page and avoided the redefinition of jQuery. With our scripts now being included once a piece in a fairly sensible location, we closed this issue.</p>
-
-<p>The other two issues were fairly trivial. First, we ensured that the generated HTML elements got unique ids. We had been generating facebookImageRotator, flickrImageRotator, etc., but if you threw two Facebook rotators on the page you&rsquo;d get a duplicate. We used the user ids, album names, etc. to make it a bit more unique. The last issue was having our widgets include <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">prettyPhoto</a> automatically instead of relying on documentation to guide the user.</p>
-
-<p>We polished up the documentation for Sitefinity developers interested in using the controls in their sites as well as those wanting to contribute to the project. David also started a separate CodePlex for hosting the fully independant <a href="http://jqueryimagerotator.codeplex.com">jQuery rotator plugin</a>.</p>
-
-<p>Feel free to download the controls and please provide some feedback.</p>
-
-<p><em>This post originally appeared on <a href="http://thedevstop.wordpress.com/2011/02/15/sswc-and-jquery-image-rotator-on-codeplex/">The DevStop</a>.</em></p>
 </div>
   
   
