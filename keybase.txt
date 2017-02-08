@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/joeyrobichaud
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.joeyrobichaud.com
+  * I am joeyrobichaud (https://keybase.io/joeyrobichaud) on keybase.
+  * I have a public key with fingerprint E069 C2C9 753A F124 6FC2  D4C5 F34B 212E FEE6 787E
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01010e6b3a739b6f3c5b752bc807e0f3d6e8fd283642d352834deebbf9d8b5d6f7f80a",
+            "fingerprint": "e069c2c9753af1246fc2d4c5f34b212efee6787e",
+            "host": "keybase.io",
+            "key_id": "f34b212efee6787e",
+            "kid": "01010e6b3a739b6f3c5b752bc807e0f3d6e8fd283642d352834deebbf9d8b5d6f7f80a",
+            "uid": "5267dda006f95ca9f95d177b59957d19",
+            "username": "joeyrobichaud"
+        },
+        "service": {
+            "hostname": "www.joeyrobichaud.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1486583619,
+    "expire_in": 157680000,
+    "prev": "76161f16a235756ac758ae1da49cd2096bbea362680f778cdb89c2964eb5f377",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.62
+Comment: https://keybase.io/crypto
+
+yMImAnicrVJbSBRRGN6tzBQWNIIionCKCjOZy845MxuZ5UNiIYkQFuY25+aOrTPb
+7LirqdG9JyXELiBqWQhG+SBaoBSVQUZCIIQVPXSh6GWDVEQIrDNLPQQ9dg6c6/d9
+5/v//zwNLPVl+3/Ex7Z23TEW/S8e32rwVXUlS5oFZJMmIdQsHKPpiUYJjbvhYyYR
+QoIo8U4BUgyo6AgwBasIqjLCmgipyBQCqMaIrCkgKBNF5YsgoRQhphMNqQQwyDTR
+EAoEZlq11Ik5puVyWSoCHctYh6piMEkOAoZlEsQqU4JIlmTKKAVQg5QTI3bcY3Bz
+yIjTQtPmZ3wTTtv7B/4/+25Iy6kygIQYogiYrmJD5yORIESqrquQSLoHjFPHMuop
+R9fZtMmxkYkjRgMRWgsEfpUwMfWy64XzG5ZMJgv/ghZiu54rxRzbtbEd5ZCI68ZC
+noLbFEtTKAr/Fgsj0yI8qZyQoE7ctC0hJHEkdk1PXQpqQOXhSXqBQBtjpkPDpodQ
+IdBE3rxnaIJLQiABiUnAkBUVqsDAUNUMKhEjqGMiizpAiBoKkDmNQahhgjReOh0E
+KeLlglDwwjtu2UJI4TaNWi4ZN2stw21wqND65FH1Mp8/27c8Y4n32XzZWTl/vuDU
+3RW+kcGNI7M5ZKzr6433THuzfbh3qLxq/mxefeLh5uS5XWUz442dZ24GLoxOOL1H
+V+uney6PM9gXKKnJ3fn10oQvf6D91Je3HetuD22pO1w8N/Fz/mjPW//n9pfF09Fn
+5mC0eCZRufH+psxHJwbySwZT1a9aUCpjLsvZ8C6SyszdvOaQmdC7D9exH4m+6Icl
+n1ZmFHUef4+nw/ev3WurfRVJ5S12DDjbHg/XDIlX1u9Vyo9cnSma9j/Pb7MWRqdu
+uV+eVCycz5uq3C+83r0/o7+qv+J6DpYOVO+YUFZ9m+3YF/ieAtaesh6z8s7Ux8m1
+pRfVa5Mn3w20bKpIHix9sNhd0fMLvVtKng==
+=4HKI
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/joeyrobichaud
+
+==================================================================
